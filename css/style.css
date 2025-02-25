@@ -1,5 +1,5 @@
 /*
-  Theme Name: DevFolio
+  Theme Name: Capaciti
   Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
   Author: BootstrapMade.com
   License: https://bootstrapmade.com/license/
@@ -36,6 +36,10 @@ a:hover {
 
 .p-r {
   position: relative;
+}
+
+.col-md-4{
+  
 }
 
 .color-a {
@@ -773,6 +777,7 @@ a:hover {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  border-radius: 25px;
 }
 
 .work-box:hover img {
@@ -783,6 +788,7 @@ a:hover {
 .work-img {
   display: block;
   overflow: hidden;
+  width:fit-content;
 }
 
 .work-img img {

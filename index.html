@@ -25,11 +25,85 @@
   <link href="css/style.css" rel="stylesheet">
 
   <!-- =======================================================
-    Theme Name: DevFolio
-    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Theme Name: Capaciti
+    Theme URL: https://bootstrapmade.com/thapelo-lekhuane/oi-portfolio-/
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thapelo's Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      .chatbot-container {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+      }
+      .chatbot-toggle {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+      .chatbot {
+          display: none;
+          width: 300px;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+      }
+      .chat-header {
+          background: #007bff;
+          color: white;
+          padding: 10px;
+          text-align: center;
+          font-weight: bold;
+      }
+      .chat-body {
+          height: 300px;
+          overflow-y: auto;
+          padding: 10px;
+      }
+      .chat-input {
+          display: flex;
+          border-top: 1px solid #ddd;
+      }
+      .chat-input input {
+          flex: 1;
+          padding: 10px;
+          border: none;
+      }
+      .chat-input button {
+          padding: 10px;
+          border: none;
+          background: #007bff;
+          color: white;
+          cursor: pointer;
+      }
+      .message {
+          padding: 5px;
+          margin: 5px 0;
+          border-radius: 5px;
+      }
+      .user-message {
+          background-color: #d1e7ff;
+          text-align: right;
+      }
+      .bot-message {
+          background-color: #e1e1e1;
+          text-align: left;
+      }
+  </style>
 </head>
 
 <body id="page-top">
@@ -319,24 +393,48 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
     </div>
   </div>
 
- <!--/ Section Portfolio Start /-->
+<!--/ Section Portfolio Start /-->
 <section id="work" class="portfolio-mf sect-pt4 route">
   <div class="container">
       <div class="row">
           <div class="col-sm-12">
               <div class="title-box text-center">
-                  <h3 class="title-a">
-                      Portfolio
-                  </h3>
-                  <p class="subtitle-a">
-                      A showcase of my projects in Software Engineering and DevOps.
-                  </p>
+                  <h3 class="title-a">Portfolio</h3>
+                  <p class="subtitle-a">A showcase of my projects in Software Engineering and DevOps.</p>
                   <div class="line-mf"></div>
               </div>
           </div>
       </div>
       <div class="row">
-          <!-- Cloud Infrastructure Automation -->
+          <!-- Portfolio Item Template -->
+          <style>
+              .work-img img {
+                  width: 100%;
+                  height: 250px;
+                  object-fit: cover;
+                  border-radius: 5px;
+              }
+              .work-box {
+                  margin-bottom: 30px;
+                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                  border-radius: 10px;
+                  overflow: hidden;
+                  background: #fff;
+              }
+              .work-content {
+                  padding: 15px;
+                  text-align: center;
+              }
+              .w-title {
+                  font-size: 18px;
+                  font-weight: bold;
+              }
+              .w-more {
+                  font-size: 14px;
+                  color: #666;
+              }
+          </style>
+          
           <div class="col-md-4">
               <div class="work-box">
                   <a href="img/devops-1.jpg" data-lightbox="gallery-mf">
@@ -344,24 +442,15 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
                           <img src="img/work-4.jpg" alt="Cloud Infrastructure Automation" class="img-fluid">
                       </div>
                       <div class="work-content">
-                          <div class="row">
-                              <div class="col-sm-8">
-                                  <h2 class="w-title">Cloud Infrastructure Automation</h2>
-                                  <div class="w-more">
-                                      <span class="w-ctegory">DevOps</span> / <span class="w-date">Jan 2024</span>
-                                  </div>
-                              </div>
-                              <div class="col-sm-4">
-                                  <div class="w-like">
-                                      <span class="ion-ios-plus-outline"></span>
-                                  </div>
-                              </div>
+                          <h2 class="w-title">Cloud Infrastructure Automation</h2>
+                          <div class="w-more">
+                              <span class="w-ctegory">DevOps</span> / <span class="w-date">Jan 2024</span>
                           </div>
                       </div>
                   </a>
               </div>
           </div>
-          <!-- CI/CD Pipeline Implementation -->
+          
           <div class="col-md-4">
               <div class="work-box">
                   <a href="img/devops-2.jpg" data-lightbox="gallery-mf">
@@ -369,24 +458,15 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
                           <img src="img/work-3.jpg" alt="CI/CD Pipeline" class="img-fluid">
                       </div>
                       <div class="work-content">
-                          <div class="row">
-                              <div class="col-sm-8">
-                                  <h2 class="w-title">CI/CD Pipeline Implementation</h2>
-                                  <div class="w-more">
-                                      <span class="w-ctegory">DevOps</span> / <span class="w-date">Dec 2023</span>
-                                  </div>
-                              </div>
-                              <div class="col-sm-4">
-                                  <div class="w-like">
-                                      <span class="ion-ios-plus-outline"></span>
-                                  </div>
-                              </div>
+                          <h2 class="w-title">CI/CD Pipeline Implementation</h2>
+                          <div class="w-more">
+                              <span class="w-ctegory">DevOps</span> / <span class="w-date">Dec 2023</span>
                           </div>
                       </div>
                   </a>
               </div>
           </div>
-          <!-- Web Application Development -->
+          
           <div class="col-md-4">
               <div class="work-box">
                   <a href="img/work-5.jpg" data-lightbox="gallery-mf">
@@ -394,93 +474,9 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
                           <img src="img/work-1.jpg" alt="Web Application" class="img-fluid">
                       </div>
                       <div class="work-content">
-                          <div class="row">
-                              <div class="col-sm-8">
-                                  <h2 class="w-title">Web Application Development</h2>
-                                  <div class="w-more">
-                                      <span class="w-ctegory">Software Engineering</span> / <span class="w-date">Nov 2023</span>
-                                  </div>
-                              </div>
-                              <div class="col-sm-4">
-                                  <div class="w-like">
-                                      <span class="ion-ios-plus-outline"></span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-          </div>
-          <!-- Kubernetes Deployment -->
-          <div class="col-md-4">
-              <div class="work-box">
-                  <a href="img/work-2.jpg" data-lightbox="gallery-mf">
-                      <div class="work-img">
-                          <img src="img/work-6.jpg" alt="Kubernetes Deployment" class="img-fluid">
-                      </div>
-                      <div class="work-content">
-                          <div class="row">
-                              <div class="col-sm-8">
-                                  <h2 class="w-title">Kubernetes Deployment</h2>
-                                  <div class="w-more">
-                                      <span class="w-ctegory">DevOps</span> / <span class="w-date">Oct 2023</span>
-                                  </div>
-                              </div>
-                              <div class="col-sm-4">
-                                  <div class="w-like">
-                                      <span class="ion-ios-plus-outline"></span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-          </div>
-          <!-- API Development -->
-          <div class="col-md-4">
-              <div class="work-box">
-                  <a href="img/post-2.jpg" data-lightbox="gallery-mf">
-                      <div class="work-img">
-                          <img src="img/post-3.jpg" alt="API Development" class="img-fluid">
-                      </div>
-                      <div class="work-content">
-                          <div class="row">
-                              <div class="col-sm-8">
-                                  <h2 class="w-title">API Development</h2>
-                                  <div class="w-more">
-                                      <span class="w-ctegory">Software Engineering</span> / <span class="w-date">Sep 2023</span>
-                                  </div>
-                              </div>
-                              <div class="col-sm-4">
-                                  <div class="w-like">
-                                      <span class="ion-ios-plus-outline"></span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-          </div>
-          <!-- Security & Compliance Automation -->
-          <div class="col-md-4">
-              <div class="work-box">
-                  <a href="img/post-2.jpg" data-lightbox="gallery-mf">
-                      <div class="work-img">
-                          <img src="img/post-1.jpg" alt="Security & Compliance" class="img-fluid">
-                      </div>
-                      <div class="work-content">
-                          <div class="row">
-                              <div class="col-sm-8">
-                                  <h2 class="w-title">Security & Compliance Automation</h2>
-                                  <div class="w-more">
-                                      <span class="w-ctegory">DevOps</span> / <span class="w-date">Aug 2023</span>
-                                  </div>
-                              </div>
-                              <div class="col-sm-4">
-                                  <div class="w-like">
-                                      <span class="ion-ios-plus-outline"></span>
-                                  </div>
-                              </div>
+                          <h2 class="w-title">Web Application Development</h2>
+                          <div class="w-more">
+                              <span class="w-ctegory">Software Engineering</span> / <span class="w-date">Nov 2023</span>
                           </div>
                       </div>
                   </a>
@@ -491,128 +487,95 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
 </section>
 <!--/ Section Portfolio End /-->
 
-  <!--/ Section Testimonials Star /-->
-  <div class="testimonials paralax-mf bg-image" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="testimonial-mf" class="owl-carousel owl-theme">
-            <div class="testimonial-box">
-              
-            </div>
-           
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
- <!--/ Section Blog Start /-->
+  <!--/ Section Blog Start /-->
 <section id="blog" class="blog-mf sect-pt4 route">
   <div class="container">
       <div class="row">
           <div class="col-sm-12">
               <div class="title-box text-center">
-                  <h3 class="title-a">
-                      Blog
-                  </h3>
-                  <p class="subtitle-a">
-                      Insights and tutorials on Software Engineering, DevOps, and Cloud Computing.
-                  </p>
+                  <h3 class="title-a">Blog</h3>
+                  <p class="subtitle-a">Insights and tutorials on Software Engineering, DevOps, and Cloud Computing.</p>
                   <div class="line-mf"></div>
               </div>
           </div>
       </div>
       <div class="row">
+          <style>
+              .card-img img {
+                  width: 100%;
+                  height: 250px;
+                  object-fit: cover;
+                  border-radius: 5px;
+              }
+              .card-blog {
+                  margin-bottom: 30px;
+                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                  border-radius: 10px;
+                  overflow: hidden;
+                  background: #fff;
+              }
+              .card-body {
+                  padding: 15px;
+                  text-align: center;
+              }
+              .card-title {
+                  font-size: 18px;
+                  font-weight: bold;
+              }
+              .card-description {
+                  font-size: 14px;
+                  color: #666;
+              }
+          </style>
+          
           <!-- Blog Post 1: DevOps Best Practices -->
           <div class="col-md-4">
               <div class="card card-blog">
                   <div class="card-img">
-                      <a href="blog-devops-best-practices.html"><img src="img/DevOps-Best-Practices.jpg" alt="DevOps Best Practices" class="img-fluid"></a>
+                      <a href="blog-devops-best-practices.html">
+                          <img src="img/DevOps-Best-Practices.jpg" alt="DevOps Best Practices" class="img-fluid">
+                      </a>
                   </div>
                   <div class="card-body">
-                      <div class="card-category-box">
-                          <div class="card-category">
-                              <h6 class="category">DevOps</h6>
-                          </div>
-                      </div>
                       <h3 class="card-title"><a href="blog-devops-best-practices.html">DevOps Best Practices for Faster Deployments</a></h3>
                       <p class="card-description">
                           Learn how to streamline your CI/CD pipeline, improve deployment speed, and enhance system reliability with DevOps best practices.
                       </p>
                   </div>
-                  <div class="card-footer">
-                      <div class="post-author">
-                          <a href="#">
-                              <img src="img/DevOps-Best-Practices.jpg" alt="" class="avatar rounded-circle">
-                              <span class="author">Thapelo Lekhuane</span>
-                          </a>
-                      </div>
-                      <div class="post-date">
-                          <span class="ion-ios-clock-outline"></span> 8 min
-                      </div>
-                  </div>
               </div>
           </div>
+          
           <!-- Blog Post 2: Docker & Kubernetes -->
           <div class="col-md-4">
               <div class="card card-blog">
                   <div class="card-img">
-                      <a href="blog-docker-kubernetes.html"><img src="img/docker&kuber.jpg" alt="Docker & Kubernetes" class="img-fluid"></a>
+                      <a href="blog-docker-kubernetes.html">
+                          <img src="img/docker&kuber.jpg" alt="Docker & Kubernetes" class="img-fluid">
+                      </a>
                   </div>
                   <div class="card-body">
-                      <div class="card-category-box">
-                          <div class="card-category">
-                              <h6 class="category">Cloud Computing</h6>
-                          </div>
-                      </div>
                       <h3 class="card-title"><a href="blog-docker-kubernetes.html">Getting Started with Docker & Kubernetes</a></h3>
                       <p class="card-description">
                           A beginner-friendly guide to containerization and orchestration using Docker and Kubernetes for scalable applications.
                       </p>
                   </div>
-                  <div class="card-footer">
-                      <div class="post-author">
-                          <a href="#">
-                              <img src="img/docker&kuber.jpg" alt="" class="avatar rounded-circle">
-                              <span class="author">Thapelo Lekhuane</span>
-                          </a>
-                      </div>
-                      <div class="post-date">
-                          <span class="ion-ios-clock-outline"></span> 12 min
-                      </div>
-                  </div>
               </div>
           </div>
+          
           <!-- Blog Post 3: Automating Infrastructure -->
           <div class="col-md-4">
               <div class="card card-blog">
                   <div class="card-img">
-                      <a href="blog-infrastructure-automation.html"><img src="img/automation & ansile.jpg" alt="Infrastructure Automation" class="img-fluid"></a>
+                      <a href="blog-infrastructure-automation.html">
+                          <img src="img/automation & ansile.jpg" alt="Infrastructure Automation" class="img-fluid">
+                      </a>
                   </div>
                   <div class="card-body">
-                      <div class="card-category-box">
-                          <div class="card-category">
-                              <h6 class="category">Infrastructure as Code</h6>
-                          </div>
-                      </div>
                       <h3 class="card-title"><a href="blog-infrastructure-automation.html">Automating Infrastructure with Terraform & Ansible</a></h3>
                       <p class="card-description">
                           Discover how Terraform and Ansible can automate cloud infrastructure provisioning, making deployments efficient and scalable.
                       </p>
-                  </div>
-                  <div class="card-footer">
-                      <div class="post-author">
-                          <a href="#">
-                              <img src="img/automation & ansile.jpg" alt="" class="avatar rounded-circle">
-                              <span class="author">Thapelo Lekhuane</span>
-                          </a>
-                      </div>
-                      <div class="post-date">
-                          <span class="ion-ios-clock-outline"></span> 15 min
-                      </div>
                   </div>
               </div>
           </div>
@@ -620,6 +583,8 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
   </div>
 </section>
 <!--/ Section Blog End /-->
+
+
 
   <!--/ Section Contact-Footer Star /-->
   <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
@@ -751,5 +716,67 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+
+
+  <div class="chatbot-container">
+    <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+    <div class="chatbot" id="chatbot">
+        <div class="chat-header">Thapelo's Assistant <button onclick="toggleChatbot()">✖</button></div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+<script>
+    const userData = {
+        name: "Thapelo Lekhuane",
+        matricYear: 2017,
+        university: "University of Limpopo (1 year)",
+        diploma: "Diploma in IT (Software Development) - Richfield Graduate Institute of Technology (2023)",
+        topModules: ["Business Communication", "ITPM", "Statistics"],
+        certifications: ["AZ-900 Cloud Fundamentals", "ALX Africa AI", "Cloud Architecture (Coursera)", "AI (Coursera)"],
+        contacts: { phone: "0636165831", email: "guycode.devops@gmail.com" },
+        linkedin: "http://www.linkedin.com/in/thapelo-lekhuane-4092112b1"
+    };
+
+    function toggleChatbot() {
+        const chatbot = document.getElementById("chatbot");
+        chatbot.style.display = chatbot.style.display === "none" || chatbot.style.display === "" ? "block" : "none";
+    }
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    }
+
+    function sendMessage() {
+        const inputField = document.getElementById("user-input");
+        const message = inputField.value.trim().toLowerCase();
+        if (message) {
+            const chatBody = document.getElementById("chat-body");
+            chatBody.innerHTML += `<div class='message user-message'>${message}</div>`;
+            inputField.value = "";
+            setTimeout(() => {
+                let response = "I'm here to assist you, how can I help?";
+                if (message.includes("resume")) {
+                    response = "You can download Thapelo's resume here: <a href='Thapelo Lekhuane(Resume) (2).pdf' download>Download Resume</a>";
+                } else if (message.includes("education")) {
+                    response = `Thapelo completed his matric in ${userData.matricYear}, studied at ${userData.university}, and obtained a ${userData.diploma}.`;
+                } else if (message.includes("certifications")) {
+                    response = `Thapelo holds the following certifications: ${userData.certifications.join(", ")}.`;
+                } else if (message.includes("contact")) {
+                    response = `You can reach Thapelo at ${userData.contacts.phone} or email ${userData.contacts.email}.`;
+                } else if (message.includes("linkedin")) {
+                    response = `Check out Thapelo's LinkedIn: <a href='${userData.linkedin}' target='_blank'>LinkedIn Profile</a>`;
+                }
+                chatBody.innerHTML += `<div class='message bot-message'>${response}</div>`;
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 1000);
+        }
+    }
+</script>
 </body>
 </html>
