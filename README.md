@@ -31,11 +31,13 @@ contact, blog & php folder
 README.md
 
 *Usage*
+
 Explore the Home, Work, Portfolio, Blogs, and Contact sections.
 Chat with the retractable assistant for information and my resume.
 Use the contact form to reach out to me directly.
 
 *Contributing*
+
 Feel free to fork the repository and submit pull requests for improvements!
 
 License
