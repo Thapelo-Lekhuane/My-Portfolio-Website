@@ -2,7 +2,7 @@ Thapelo Lekhuane - Personal Portfolio Website
 
 Welcome to my personal portfolio! This website showcases my work, blog, and provides a means to contact me. It also includes an interactive chatbot that assists visitors and offers my resume when requested.
 
-Features
+*Features*
 Responsive Design: Optimized for all devices.
 Interactive Chatbot: A retractable assistant that helps users and provides my resume.
 Contact Form: Lets visitors get in touch directly.
@@ -14,27 +14,28 @@ PHP: For backend form processing.
 Libraries: Custom libraries for extra functionality.
 
 
-Project Structure
-bash
+*Project Structure*
+
 contact, blog & php folder
-    ├── contact.php
-    ├── blog-single.html
+    *── contact.php
+    *── blog-single.html
 /lib folder
-    ├── [Libraries]
+    *── [Libraries]
 /img
-    ├── [Images]
+    *── [Images]
 /css
-    ├── style.css
+    *── style.css
 /js
-    ├── main.js
+    *── main.js
 /index.html
 README.md
 
-Usage
+*Usage*
 Explore the Home, Work, Portfolio, Blogs, and Contact sections.
 Chat with the retractable assistant for information and my resume.
 Use the contact form to reach out to me directly.
-Contributing
+
+*Contributing*
 Feel free to fork the repository and submit pull requests for improvements!
 
 License
