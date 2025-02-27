@@ -35,75 +35,104 @@
   <title>Thapelo's Assistant</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-          background-color: #f4f4f4;
-      }
-      .chatbot-container {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-      }
-      .chatbot-toggle {
-          background-color: #007bff;
-          color: white;
-          border: none;
-          padding: 10px;
-          border-radius: 50%;
-          cursor: pointer;
-      }
-      .chatbot {
-          display: none;
-          width: 300px;
-          background: white;
-          border-radius: 10px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-      }
-      .chat-header {
-          background: #007bff;
-          color: white;
-          padding: 10px;
-          text-align: center;
-          font-weight: bold;
-      }
-      .chat-body {
-          height: 300px;
-          overflow-y: auto;
-          padding: 10px;
-      }
-      .chat-input {
-          display: flex;
-          border-top: 1px solid #ddd;
-      }
-      .chat-input input {
-          flex: 1;
-          padding: 10px;
-          border: none;
-      }
-      .chat-input button {
-          padding: 10px;
-          border: none;
-          background: #007bff;
-          color: white;
-          cursor: pointer;
-      }
-      .message {
-          padding: 5px;
-          margin: 5px 0;
-          border-radius: 5px;
-      }
-      .user-message {
-          background-color: #d1e7ff;
-          text-align: right;
-      }
-      .bot-message {
-          background-color: #e1e1e1;
-          text-align: left;
-      }
-  </style>
+    .chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .chatbot-toggle {
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+    }
+
+    .chatbot {
+        display: none;
+        width: 320px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+    .chat-header {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .chat-body {
+        height: 300px;
+        overflow-y: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message {
+        padding: 8px;
+        border-radius: 5px;
+        margin: 5px 0;
+        max-width: 80%;
+    }
+
+    .user-message {
+        background: #007bff;
+        color: white;
+        align-self: flex-end;
+    }
+
+    .bot-message {
+        background: #f1f1f1;
+        color: black;
+        align-self: flex-start;
+    }
+
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .chat-input button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        margin-left: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .chat-input button:hover {
+        background: #0056b3;
+    }
+</style>
 </head>
 
 <body id="page-top">
@@ -215,9 +244,9 @@
                     </h5>
                   </div>
                   <p class="lead">
-                    I am a <span style="font-weight: bold;">DevOps Engineer, Microsoft Cloud Developer, and Software Developer</span> with expertise in Azure, CI/CD, automation, and software development. I specialize in streamlining workflows, optimizing cloud infrastructure, and building scalable applications.
+                    Hi,<span style="font-weight: bold;">
 
-With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focus on automating deployments, enhancing system reliability, and developing secure cloud solutions. My passion lies in efficiency, innovation, and staying ahead of industry trends to deliver high-quality software and cloud solutions.
+                      I am a DevOps Engineer, Microsoft Cloud Developer, and Software Developer</span> with expertise in Azure, CI/CD, automation, and software development. I specialize in cloud optimization, automation, and secure, scalable applications using Azure DevOps, Kubernetes, Docker, Terraform, and .NET.
                   </p>
                   <p> <span style="font-weight: bold;"> Key Skills:</span>
                   </p>
@@ -225,8 +254,8 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
                 
                   Cloud & DevOps: Azure, AWS, CI/CD, Kubernetes, Terraform
                   Software Development: C#, Python, JavaScript, .NET
-                  Automation & Security: PowerShell, Bash, Azure DevOps, Cloud Security.
-
+                  Automation & Security: PowerShell, Bash, Azure DevOps, Cloud Security
+                  
                  </p>
                 </div>
               </div>
@@ -324,74 +353,74 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
                     </div>
                 </div>
             </div>
-            <!-- Security & Compliance -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-lock-combination"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Security & Compliance</h2>
-                        <p class="s-description text-center">
-                            Implementing security best practices, monitoring threats, and ensuring compliance with industry standards.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <!-- Security & Compliance -->  
+<div class="col-md-4 col-sm-12">
+  <div class="service-box">
+      <div class="service-ico">
+          <span class="ico-circle"><i class="ion-lock-combination"></i></span>
+      </div>
+      <div class="service-content">
+          <h2 class="s-title">Security & Compliance</h2>
+          <p class="s-description text-center">
+              Implementing security best practices, monitoring threats, and ensuring compliance with industry standards.
+          </p>
+      </div>
+  </div>
+</div>
+</div>
+</div>
 </section>
-  <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
-    <div class="overlay-mf"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">8</p>
-              <span class="counter-text">WORKS COMPLETED</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">2</p>
-              <span class="counter-text">YEARS OF EXPERIENCE</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-people"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">5</p>
-              <span class="counter-text">TOTAL CLIENTS</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">0</p>
-              <span class="counter-text">AWARD WON</span>
-            </div>
-          </div>
-        </div>
+<div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
+<div class="overlay-mf"></div>
+<div class="container">
+<div class="row">
+  <div class="col-sm-6 col-lg-3">
+    <div class="counter-box">
+      <div class="counter-ico">
+        <a href="https://legaelamatlo.co.za/" target="_blank"><span class="ico-circle"><i class="ion-checkmark-round"></i></span></a>
+      </div>
+      <div class="counter-num">
+        <p class="counter"><a href="https://legaelamatlo.co.za/" target="_blank">1</a></p>
+        <span class="counter-text">WORKS COMPLETED</span>
       </div>
     </div>
   </div>
+  <div class="col-sm-6 col-lg-3">
+    <div class="counter-box pt-4 pt-md-0">
+      <div class="counter-ico">
+        <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+      </div>
+      <div class="counter-num">
+        <p class="counter">2</p>
+        <span class="counter-text">YEARS OF EXPERIENCE</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-3">
+    <div class="counter-box pt-4 pt-md-0">
+      <div class="counter-ico">
+        <span class="ico-circle"><i class="ion-ios-people"></i></span>
+      </div>
+      <div class="counter-num">
+        <p class="counter">5</p>
+        <span class="counter-text">TOTAL CLIENTS</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-3">
+    <div class="counter-box pt-4 pt-md-0">
+      <div class="counter-ico">
+        <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+      </div>
+      <div class="counter-num">
+        <p class="counter">0</p>
+        <span class="counter-text">AWARD WON</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 
 <!--/ Section Portfolio Start /-->
 <section id="work" class="portfolio-mf sect-pt4 route">
@@ -721,7 +750,9 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
   <div class="chatbot-container">
     <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
     <div class="chatbot" id="chatbot">
-        <div class="chat-header">Thapelo's Assistant <button onclick="toggleChatbot()">✖</button></div>
+        <div class="chat-header">Thapelo's Assistant 
+            <button onclick="toggleChatbot()">✖</button>
+        </div>
         <div class="chat-body" id="chat-body"></div>
         <div class="chat-input">
             <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
@@ -729,6 +760,7 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
         </div>
     </div>
 </div>
+
 <script>
     const userData = {
         name: "Thapelo Lekhuane",
@@ -754,29 +786,41 @@ With experience in Azure DevOps, Kubernetes, Docker, Terraform, and .NET, I focu
 
     function sendMessage() {
         const inputField = document.getElementById("user-input");
-        const message = inputField.value.trim().toLowerCase();
-        if (message) {
-            const chatBody = document.getElementById("chat-body");
-            chatBody.innerHTML += `<div class='message user-message'>${message}</div>`;
-            inputField.value = "";
-            setTimeout(() => {
-                let response = "I'm here to assist you, how can I help?";
-                if (message.includes("resume")) {
-                    response = "You can download Thapelo's resume here: <a href='Thapelo Lekhuane(Resume) (2).pdf' download>Download Resume</a>";
-                } else if (message.includes("education")) {
-                    response = `Thapelo completed his matric in ${userData.matricYear}, studied at ${userData.university}, and obtained a ${userData.diploma}.`;
-                } else if (message.includes("certifications")) {
-                    response = `Thapelo holds the following certifications: ${userData.certifications.join(", ")}.`;
-                } else if (message.includes("contact")) {
-                    response = `You can reach Thapelo at ${userData.contacts.phone} or email ${userData.contacts.email}.`;
-                } else if (message.includes("linkedin")) {
-                    response = `Check out Thapelo's LinkedIn: <a href='${userData.linkedin}' target='_blank'>LinkedIn Profile</a>`;
-                }
-                chatBody.innerHTML += `<div class='message bot-message'>${response}</div>`;
-                chatBody.scrollTop = chatBody.scrollHeight;
-            }, 1000);
+        const message = inputField.value.trim();
+        if (!message) return;
+
+        const chatBody = document.getElementById("chat-body");
+        chatBody.innerHTML += `<div class='message user-message'>${message}</div>`;
+        inputField.value = "";
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        setTimeout(() => {
+            let response = getBotResponse(message.toLowerCase());
+            chatBody.innerHTML += `<div class='message bot-message'>${response}</div>`;
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }, 800);
+    }
+
+    function getBotResponse(message) {
+        if (message.includes("resume")) {
+            return "You can download Thapelo's resume here: <a href='Thapelo Lekhuane(Resume) (2).pdf' download>Download Resume</a>";
+        } else if (message.includes("education") || message.includes("study")) {
+            return `Thapelo completed matric in ${userData.matricYear}, studied at ${userData.university}, and obtained a ${userData.diploma}.`;
+        } else if (message.includes("certifications") || message.includes("skills")) {
+            return `Thapelo holds certifications: ${userData.certifications.join(", ")}.`;
+        } else if (message.includes("contact") || message.includes("email") || message.includes("phone")) {
+            return `You can reach Thapelo at ${userData.contacts.phone} or email <a href="mailto:${userData.contacts.email}">${userData.contacts.email}</a>.`;
+        } else if (message.includes("linkedin") || message.includes("profile")) {
+            return `Check out Thapelo's LinkedIn: <a href='${userData.linkedin}' target='_blank'>LinkedIn Profile</a>`;
+        } else if (message.includes("hello") || message.includes("hi")) {
+            return `Hello! How can I assist you today? 😊`;
+        } else if (message.includes("thank you") || message.includes("thanks")) {
+            return `You're welcome! Let me know if you need anything else.`;
+        } else {
+            return `I'm here to assist you! Ask me about Thapelo's resume, education, certifications, or contact info.`;
         }
     }
+</script>
 </script>
 </body>
 </html>
