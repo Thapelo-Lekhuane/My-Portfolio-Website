@@ -238,6 +238,31 @@
         cursor: pointer;
     }
 
+    /* Fix counter text visibility */
+    .counter-box .counter-text {
+        color: #333 !important;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Fix counter numbers visibility */
+    .counter-box .counter {
+        color: #333 !important;
+    }
+
+    /* Fix counter icons visibility */
+    .counter-box .ico-circle {
+        color: #007bff !important;
+        background-color: #f8f9fa !important;
+    }
+
+    /* Fix counter box overall styling */
+    .counter-box {
+        color: #333 !important;
+    }
+
     /* Comprehensive Responsive Design */
     @media (max-width: 1200px) {
         .container {
@@ -895,6 +920,8 @@
       position: relative;
       overflow: hidden;
     }
+
+    .carousel {
 </style>
 </head>
 
@@ -1719,27 +1746,35 @@
           <div class="certifications-container">
             <a href="img/DevOps Essentials.png" data-lightbox="certs" data-title="DevOps Essentials">
               <img src="img/DevOps Essentials.png" alt="Certification 1">
+              <span class="view-overlay">Click to View</span>
             </a>
             <a href="img/Cloud Native, DevOps, Agile & NoSQL Essentials.png" data-lightbox="certs" data-title="Cloud Native, DevOps, Agile & NoSQL Essentials">
               <img src="img/Cloud Native, DevOps, Agile & NoSQL Essentials.png" alt="Certification 2">
+              <span class="view-overlay">Click to View</span>
             </a>
             <a href="img/Cloud Architecture and Infrastructure.png" data-lightbox="certs" data-title="Cloud Architecture and Infrastructure">
               <img src="img/Cloud Architecture and Infrastructure.png" alt="Certification 3">
+              <span class="view-overlay">Click to View</span>
             </a>
             <a href="img/Git and GitHub Essentials.png" data-lightbox="certs" data-title="Git and GitHub Essentials">
               <img src="img/Git and GitHub Essentials.png" alt="Certification 4">
+              <span class="view-overlay">Click to View</span>
             </a>
             <a href="img/Software Engineering Essentials.png" data-lightbox="certs" data-title="Software Engineering Essentials">
               <img src="img/Software Engineering Essentials.png" alt="Certification 5">
+              <span class="view-overlay">Click to View</span>
             </a>
             <a href="img/Artificial Interligence.png" data-lightbox="certs" data-title="Artificial Intelligence">
               <img src="img/Artificial Interligence.png" alt="Certification 6">
+              <span class="view-overlay">Click to View</span>
             </a>
             <a href="img/AZ-900.png" data-lightbox="certs" data-title="AZ-900 Certification">
               <img src="img/AZ-900.png" alt="Certification 8">
+              <span class="view-overlay">Click to View</span>
             </a>
             <a href="img/66-alx-aice-ai-career-essentials-certificate-thapelo-lekhuane.png" data-lightbox="certs" data-title="AI Career Essentials">
               <img src="img/66-alx-aice-ai-career-essentials-certificate-thapelo-lekhuane.png" alt="Certification 7">
+              <span class="view-overlay">Click to View</span>
             </a>
           </div>
         </div>
@@ -1758,18 +1793,19 @@
   
   .certifications-container a {
     display: block;
-    border: 3px solid #007bff;
+    border: 2px solid #e0e0e0;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
   }
   
   .certifications-container a:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
-    border-color: #0056b3;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #ccc;
   }
   
   .certifications-container img {
@@ -1781,6 +1817,31 @@
   
   .certifications-container a:hover img {
     transform: scale(1.05);
+  }
+
+  .certifications-container .view-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,123,255,0.65);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .certifications-container a:hover .view-overlay {
+    opacity: 1;
   }
   
   @media (max-width: 768px) {
