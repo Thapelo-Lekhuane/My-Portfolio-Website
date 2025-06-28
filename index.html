@@ -20,6 +20,7 @@
 <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
 
+<!-- Formspree for Contact Form -->
 
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -40,8 +41,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thapelo's Assistant</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
+    /* Apply light grey background throughout the entire page */
+    body {
+      background-color: #e5e7eb !important;
+    }
+    
+    /* Force light grey background on all content boxes */
+    .box-shadow-full,
+    .service-box,
+    .work-box,
+    .card-blog,
+    .testimonial-box,
+    .counter-box,
+    .contact-mf .box-shadow-full,
+    .about-mf .box-shadow-full,
+    #experience .box-shadow-full,
+    #service .box-shadow-full,
+    #work .box-shadow-full,
+    #blog .box-shadow-full,
+    #contact .box-shadow-full,
+    .post-box,
+    .blog-wrapper,
+    .widget-sidebar,
+    .box-comments,
+    .card-blog .card-body,
+    .card-blog .card-category-box,
+    .work-content,
+    .service-box .service-ico,
+    .counter-ico,
+    .testimonial-box .author-test,
+    .testimonial-box .description,
+    .testimonial-box .comit {
+      background-color: #ffffff !important;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    /* Apply light grey background to all sections */
+    .about-mf,
+    .service-mf,
+    .work-mf,
+    .blog-mf,
+    .contact-mf,
+    .experience-mf,
+    .sect-pt4,
+    .sect-mt4 {
+      background-color: #e5e7eb !important;
+    }
+    
+    /* Ensure all containers have consistent background */
+    .container,
+    .container-fluid {
+      background-color: transparent;
+    }
+    
+    /* Style all section backgrounds consistently */
+    section {
+      background-color: #e5e7eb !important;
+    }
+    
+    /* Override any dark backgrounds */
+    .bg-image,
+    .intro,
+    .overlay-itro {
+      background-color: transparent !important;
+    }
+    
+    /* Ensure navbar maintains its styling */
+    .navbar {
+      background-color: transparent !important;
+      backdrop-filter: none;
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.9) !important;
+      backdrop-filter: blur(10px);
+    }
+    
+    /* Fix navbar text colors for better visibility */
+    .navbar .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #007bff !important;
+    }
+    
+    /* Fix subtitle visibility */
+    .subtitle-a {
+      color: #666 !important;
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 2rem !important;
+    }
+    
     .chatbot-container {
         position: fixed;
         bottom: 20px;
@@ -139,6 +236,176 @@
     .chat-input button:hover {
         background: #0056b3;
     }
+
+    /* Improve work section visibility */
+    .work-box {
+      background-color: #ffffff !important;
+      border: 1px solid #e9ecef;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .work-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .work-content {
+      background-color: #ffffff !important;
+      color: #333 !important;
+    }
+    
+    .w-title {
+      color: #333 !important;
+      font-weight: 600;
+    }
+    
+    .w-more {
+      color: #666 !important;
+    }
+    
+    /* Ensure work images are properly visible */
+    .work-img img {
+      border-radius: 8px 8px 0 0;
+      transition: transform 0.3s ease;
+    }
+    
+    .work-box:hover .work-img img {
+      transform: scale(1.05);
+    }
+
+    /* Fix counter section text colors */
+    .counter-box {
+      background-color: #ffffff !important;
+      color: #333 !important;
+    }
+    
+    .counter-box .counter-ico {
+      background-color: #007bff !important;
+      color: #ffffff !important;
+    }
+    
+    .counter-box .counter-num {
+      color: #333 !important;
+      font-weight: bold;
+    }
+    
+    .counter-box .counter-text {
+      color: #666 !important;
+    }
+    
+    /* Fix service section text colors */
+    .service-box {
+      background-color: #ffffff !important;
+      color: #333 !important;
+    }
+    
+    .service-box .service-ico {
+      background-color: #007bff !important;
+      color: #ffffff !important;
+    }
+    
+    .service-box .s-title {
+      color: #333 !important;
+    }
+    
+    .service-box .s-description {
+      color: #666 !important;
+    }
+    
+    /* Fix testimonial section text colors */
+    .testimonial-box {
+      background-color: #ffffff !important;
+      color: #333 !important;
+    }
+    
+    .testimonial-box .description {
+      color: #333 !important;
+    }
+    
+    .testimonial-box .author-test {
+      color: #333 !important;
+    }
+    
+    .testimonial-box .comit {
+      color: #007bff !important;
+    }
+    
+    /* Certifications section styling */
+    .certifications-section {
+      background-color: #f8f9fa !important;
+    }
+    
+    .certifications-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+    
+    .certifications-container a {
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .certifications-container a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .certifications-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+    
+    /* Service box improvements */
+    .service-box {
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .service-ico {
+      margin-bottom: 20px;
+    }
+    
+    .ico-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #007bff !important;
+      color: #ffffff !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 30px;
+      transition: transform 0.3s ease;
+    }
+    
+    .service-box:hover .ico-circle {
+      transform: scale(1.1);
+    }
+    
+    /* Override certifications section to match consistent styling */
+    .certifications-section {
+      background-color: #e5e7eb !important;
+    }
+    
+    .certifications-section .box-shadow-full {
+      background-color: #ffffff !important;
+    }
 </style>
 </head>
 
@@ -163,13 +430,16 @@
             <a class="nav-link js-scroll" href="#about">About</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll" href="#service">Services</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#work">Work</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#blog">Blog</a>
+            <a class="nav-link js-scroll" href="#hustles">Hustles</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#contact">Contact</a>
@@ -209,15 +479,25 @@
 
           <!-- Main Content Row -->
           <div class="row align-items-center">
-            <!-- Left: Image -->
-            <div class="col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
-              <img src="img/testimonial-2.jpg" alt="Thapelo Lekhuane"
+            <!-- Left: Image and Resume Button -->
+            <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center justify-content-center">
+              <img src="img/testimonial-2.jpg?v=2" alt="Thapelo Lekhuane"
                 class="rounded-circle shadow border border-primary border-3"
                 style="width: 180px; height: 180px; object-fit: cover; margin-top: -1rem;">
+              <!-- Resume Download Link -->
+              <a href="docs/Thapelo%20Lekhuane%20%20Resume.pdf" class="btn btn-outline-primary mt-3" download>
+                Download my resume
+              </a>
             </div>
 
-            <!-- Right: Skills -->
+            <!-- Right: About Info and Skills -->
             <div class="col-md-8">
+              <!-- About Me Description -->
+              <div class="about-description mb-4">
+                <h5 class="mb-3">Who I Am</h5>
+                <p class="mb-4">I'm a soft-spoken software engineer with a passion for creating innovative digital solutions. With expertise in JavaScript, React, Node.js, and Firebase, I specialize in building modern, scalable web applications that deliver exceptional user experiences. My approach combines technical excellence with thoughtful communication, ensuring that every project not only meets technical requirements but also exceeds client expectations. I believe in writing clean, maintainable code and staying current with industry best practices to deliver solutions that are both robust and future-proof.</p>
+              </div>
+
               <div id="skill-rotator-bars" class="fade-box">
                 <!-- Skills rotate here -->
               </div>
@@ -229,6 +509,143 @@
     </div>
   </div>
 </section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full p-4">
+          <div class="text-center mb-4">
+            <h3 class="title-left">Professional Experience</h3>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Experience Timeline -->
+              <div class="experience-timeline">
+                
+                <!-- Current Position -->
+                <div class="experience-item mb-4">
+                  <div class="experience-header d-flex justify-content-between align-items-start">
+                    <div>
+                      <h4 class="mb-1">SOFTWARE ENGINEER</h4>
+                      <h5 class="text-primary mb-2">Talent Match Africa</h5>
+                    </div>
+                    <span class="badge badge-primary">May 2025 - Present</span>
+                  </div>
+                  <ul class="experience-details">
+                    <li>Developing responsive front-end interfaces using React, Angular, and modern JavaScript/TypeScript</li>
+                    <li>Building and customizing WordPress themes and HubSpot CMS templates for dynamic, marketing-driven websites</li>
+                    <li>Translating UI/UX designs into pixel-perfect, cross-browser-compatible web pages</li>
+                    <li>Optimizing front-end performance and accessibility for speed, SEO, and user experience</li>
+                  </ul>
+                </div>
+
+                <!-- Previous Position -->
+                <div class="experience-item mb-4">
+                  <div class="experience-header d-flex justify-content-between align-items-start">
+                    <div>
+                      <h4 class="mb-1">FULLSTACK DEVELOPER</h4>
+                      <h5 class="text-primary mb-2">CAPACITI</h5>
+                    </div>
+                    <span class="badge badge-primary">December 2024 - May 2025</span>
+                  </div>
+                  <ul class="experience-details">
+                    <li>Built and deployed front-end and full-stack apps with React, Angular, Node.js, and MongoDB</li>
+                    <li>Wrote clean, scalable, and high-performance code</li>
+                    <li>Debugged, optimized, and refactored code for stability and efficiency</li>
+                    <li>Managed version control and branching with Git (GitHub/GitLab)</li>
+                  </ul>
+                </div>
+
+                <!-- First Position -->
+                <div class="experience-item mb-4">
+                  <div class="experience-header d-flex justify-content-between align-items-start">
+                    <div>
+                      <h4 class="mb-1">DEVOPS ENGINEER</h4>
+                      <h5 class="text-primary mb-2">DynamicDNA</h5>
+                    </div>
+                    <span class="badge badge-primary">August 2024 - November 2024</span>
+                  </div>
+                  <ul class="experience-details">
+                    <li>Built cloud-native applications on Azure</li>
+                    <li>Used Infrastructure as Code with ARM, Bicep, and Terraform</li>
+                    <li>Designed and managed CI/CD pipelines for smooth deployments</li>
+                    <li>Applied DevOps best practices to optimize development workflows</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles for Experience Section -->
+<style>
+  .experience-item {
+    border-left: 3px solid #007bff;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .experience-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #007bff;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #007bff;
+  }
+  
+  .experience-header h4 {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .experience-header h5 {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .experience-details {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .experience-details li {
+    margin-bottom: 8px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .badge-primary {
+    background-color: #007bff;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .experience-header {
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+    
+    .experience-header .badge {
+      margin-top: 10px;
+    }
+  }
+</style>
 
 <!-- Styles -->
 <style>
@@ -357,109 +774,108 @@
 
 
   <!--/ Section Services Star /-->
-  <section id="service" class="services-mf route">
+  <section id="service" class="services-mf sect-pt4 route">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="title-box text-center">
-                    <h3 class="title-a">
-                        Services
-                    </h3>
-                    <p class="subtitle-a">
-                        Providing top-tier solutions in Software Engineering and DevOps.
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full p-4">
+            <!-- Title -->
+            <div class="text-center mb-4">
+              <h3 class="title-left">Services</h3>
+              <p class="subtitle-a mb-4">Providing top-tier solutions in Software Engineering and DevOps.</p>
+            </div>
+            
+            <div class="row">
+              <!-- Software Development -->
+              <div class="col-md-4 mb-4">
+                <div class="service-box h-100">
+                  <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-code-working"></i></span>
+                  </div>
+                  <div class="service-content">
+                    <h2 class="s-title">Software Development</h2>
+                    <p class="s-description text-center">
+                      Custom software solutions using modern programming languages and frameworks to build scalable and efficient applications.
                     </p>
-                    <div class="line-mf"></div>
+                  </div>
                 </div>
+              </div>
+              <!-- DevOps Solutions -->
+              <div class="col-md-4 mb-4">
+                <div class="service-box h-100">
+                  <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-network"></i></span>
+                  </div>
+                  <div class="service-content">
+                    <h2 class="s-title">DevOps Solutions</h2>
+                    <p class="s-description text-center">
+                      Automating infrastructure, CI/CD pipelines, and cloud deployments to streamline software development and operations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Cloud Computing -->
+              <div class="col-md-4 mb-4">
+                <div class="service-box h-100">
+                  <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-cloud"></i></span>
+                  </div>
+                  <div class="service-content">
+                    <h2 class="s-title">Cloud Computing</h2>
+                    <p class="s-description text-center">
+                      Deploying and managing cloud-based applications on AWS, Azure, and Google Cloud for scalability and efficiency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- System Architecture -->
+              <div class="col-md-4 mb-4">
+                <div class="service-box h-100">
+                  <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-gear-a"></i></span>
+                  </div>
+                  <div class="service-content">
+                    <h2 class="s-title">System Architecture</h2>
+                    <p class="s-description text-center">
+                      Designing robust, high-performance software architectures that ensure security, scalability, and maintainability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Containerization & Orchestration -->
+              <div class="col-md-4 mb-4">
+                <div class="service-box h-100">
+                  <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-cube"></i></span>
+                  </div>
+                  <div class="service-content">
+                    <h2 class="s-title">Containerization & Orchestration</h2>
+                    <p class="s-description text-center">
+                      Managing containerized applications using Docker and Kubernetes for better scalability and resource utilization.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Security & Compliance -->  
+              <div class="col-md-4 mb-4">
+                <div class="service-box h-100">
+                  <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-lock-combination"></i></span>
+                  </div>
+                  <div class="service-content">
+                    <h2 class="s-title">Security & Compliance</h2>
+                    <p class="s-description text-center">
+                      Implementing security best practices, monitoring threats, and ensuring compliance with industry standards.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="row">
-            <!-- Software Development -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-code-working"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Software Development</h2>
-                        <p class="s-description text-center">
-                            Custom software solutions using modern programming languages and frameworks to build scalable and efficient applications.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- DevOps Solutions -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-network"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">DevOps Solutions</h2>
-                        <p class="s-description text-center">
-                            Automating infrastructure, CI/CD pipelines, and cloud deployments to streamline software development and operations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Cloud Computing -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-cloud"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Cloud Computing</h2>
-                        <p class="s-description text-center">
-                            Deploying and managing cloud-based applications on AWS, Azure, and Google Cloud for scalability and efficiency.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- System Architecture -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-gear-a"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">System Architecture</h2>
-                        <p class="s-description text-center">
-                            Designing robust, high-performance software architectures that ensure security, scalability, and maintainability.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Containerization & Orchestration -->
-            <div class="col-md-4">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-cube"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Containerization & Orchestration</h2>
-                        <p class="s-description text-center">
-                            Managing containerized applications using Docker and Kubernetes for better scalability and resource utilization.
-                        </p>
-                    </div>
-                </div>
-            </div>
-      <!-- Security & Compliance -->  
-<div class="col-md-4 col-sm-12">
-  <div class="service-box">
-      <div class="service-ico">
-          <span class="ico-circle"><i class="ion-lock-combination"></i></span>
       </div>
-      <div class="service-content">
-          <h2 class="s-title">Security & Compliance</h2>
-          <p class="s-description text-center">
-              Implementing security best practices, monitoring threats, and ensuring compliance with industry standards.
-          </p>
-      </div>
-  </div>
-</div>
-</div>
-</div>
-</section>
+    </div>
+  </section>
 <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
 <div class="overlay-mf"></div>
 <div class="container">
@@ -492,7 +908,7 @@
         <span class="ico-circle"><i class="ion-ios-people"></i></span>
       </div>
       <div class="counter-num">
-        <p class="counter">5</p>
+        <p class="counter">13</p>
         <span class="counter-text">TOTAL CLIENTS</span>
       </div>
     </div>
@@ -515,92 +931,102 @@
 <!--/ Section Portfolio Start /-->
 <section id="work" class="portfolio-mf sect-pt4 route">
   <div class="container">
-      <div class="row">
-          <div class="col-sm-12">
-              <div class="title-box text-center">
-                  <h3 class="title-a">Projects</h3>
-                  <p class="subtitle-a">A showcase of my projects in Software Engineering and DevOps.</p>
-                  <div class="line-mf"></div>
-              </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full p-4">
+          <!-- Title -->
+          <div class="text-center mb-4">
+            <h3 class="title-left">Projects</h3>
+            <p class="subtitle-a mb-4">A showcase of my projects in Software Engineering and DevOps.</p>
           </div>
-      </div>
-      <div class="row">
-          <!-- Portfolio Item Template -->
-          <style>
+          
+          <div class="row">
+            <!-- Portfolio Item Template -->
+            <style>
               .work-img img {
-                  width: 100%;
-                  height: 250px;
-                  object-fit: cover;
-                  border-radius: 5px;
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 5px;
               }
               .work-box {
-                  margin-bottom: 30px;
-                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                  border-radius: 10px;
-                  overflow: hidden;
-                  background: #fff;
+                margin-bottom: 30px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+                background: #fff;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              }
+              .work-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
               }
               .work-content {
-                  padding: 15px;
-                  text-align: center;
+                padding: 15px;
+                text-align: center;
+                background-color: #ffffff !important;
+                color: #333 !important;
               }
               .w-title {
-                  font-size: 18px;
-                  font-weight: bold;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333 !important;
               }
               .w-more {
-                  font-size: 14px;
-                  color: #666;
+                font-size: 14px;
+                color: #666 !important;
               }
-          </style>
-          
-         <div class="col-md-4">
-    <div class="work-box">
-        <a href="https://movie-database-application.onrender.com/" target="_blank" rel="noopener noreferrer">
-            <div class="work-img">
-                <img src="img/Movie-db.png" alt="Movie Database Website" class="img-fluid">
+            </style>
+            
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="https://movie-database-application.onrender.com/" target="_blank" rel="noopener noreferrer">
+                  <div class="work-img">
+                    <img src="img/Movie-db.png" alt="Movie Database Website" class="img-fluid">
+                  </div>
+                  <div class="work-content">
+                    <h2 class="w-title">A Movie Database Website</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Software Engineer</span> / <span class="w-date">Dec 2024</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="work-content">
-                <h2 class="w-title">A Movie Database Website</h2>
-                <div class="w-more">
-                    <span class="w-ctegory">Software Engineer</span> / <span class="w-date">Dec 2024</span>
-                </div>
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="https://thapelo-lekhuane.github.io/to-do-list-capaciti/" target="_blank" rel="noopener noreferrer">
+                  <div class="work-img">
+                    <img src="img/Todo-list.png" alt="To-Do List Application" class="img-fluid">
+                  </div>
+                  <div class="work-content">
+                    <h2 class="w-title">A To-Do List</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Software Engineer</span> / <span class="w-date">Dec 2024</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-        </a>
-    </div>
-</div>
-         <div class="col-md-4">
-    <div class="work-box">
-        <a href="https://thapelo-lekhuane.github.io/to-do-list-capaciti/" target="_blank" rel="noopener noreferrer">
-            <div class="work-img">
-                <img src="img/Todo-list.png" alt="To-Do List Application" class="img-fluid">
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="https://legaelamatlo.co.za/" target="_blank" rel="noopener noreferrer">
+                  <div class="work-img">
+                    <img src="img/Legaelamatlo.png" alt="Legae La Matlo Skills Development Center Website" class="img-fluid">
+                  </div>
+                  <div class="work-content">
+                    <h2 class="w-title">Skills Development Center Website</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Software Engineering</span> / <span class="w-date">Nov 2023</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="work-content">
-                <h2 class="w-title">A To-Do List</h2>
-                <div class="w-more">
-                    <span class="w-ctegory">Software Engineer</span> / <span class="w-date">Dec 2024</span>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-          
-          <div class="col-md-4">
-    <div class="work-box">
-        <a href="https://legaelamatlo.co.za/" target="_blank" rel="noopener noreferrer">
-            <div class="work-img">
-                <img src="img/Legaelamatlo.png" alt="Legae La Matlo Skills Development Center Website" class="img-fluid">
-            </div>
-            <div class="work-content">
-                <h2 class="w-title">Skills Development Center Website</h2>
-                <div class="w-more">
-                    <span class="w-ctegory">Software Engineering</span> / <span class="w-date">Nov 2023</span>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </section>
 
@@ -611,135 +1037,333 @@
 
 
 <!--Certifications section-->
-<!--Certifications section-->
-<section class="certifications-section">
-    <h2>My <strong>Certifications</strong></h2>
-    <div class="certifications-container">
-        <a href="img/DevOps Essentials.png" data-lightbox="certs" data-title="DevOps Essentials">
-            <img src="img/DevOps Essentials.png" alt="Certification 1">
-        </a>
-        <a href="img/Cloud Native, DevOps, Agile & NoSQL Essentials.png" data-lightbox="certs" data-title="Cloud Native, DevOps, Agile & NoSQL Essentials">
-            <img src="img/Cloud Native, DevOps, Agile & NoSQL Essentials.png" alt="Certification 2">
-        </a>
-        <a href="img/Cloud Architecture and Infrastructure.png" data-lightbox="certs" data-title="Cloud Architecture and Infrastructure">
-            <img src="img/Cloud Architecture and Infrastructure.png" alt="Certification 3">
-        </a>
-        <a href="img/Git and GitHub Essentials.png" data-lightbox="certs" data-title="Git and GitHub Essentials">
-            <img src="img/Git and GitHub Essentials.png" alt="Certification 4">
-        </a>
-        <a href="img/Software Engineering Essentials.png" data-lightbox="certs" data-title="Software Engineering Essentials">
-            <img src="img/Software Engineering Essentials.png" alt="Certification 5">
-        </a>
-        <a href="img/Artificial Interligence.png" data-lightbox="certs" data-title="Artificial Intelligence">
-            <img src="img/Artificial Interligence.png" alt="Certification 6">
-        </a>
-        <a href="img/AZ-900.png" data-lightbox="certs" data-title="AZ-900 Certification">
-            <img src="img/AZ-900.png" alt="Certification 8">
-        </a>
-        <a href="img/66-alx-aice-ai-career-essentials-certificate-thapelo-lekhuane.png" data-lightbox="certs" data-title="AI Career Essentials">
-            <img src="img/66-alx-aice-ai-career-essentials-certificate-thapelo-lekhuane.png" alt="Certification 7">
-        </a>
+<section class="certifications-section sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full p-4">
+          <!-- Title -->
+          <div class="text-center mb-4">
+            <h3 class="title-left">My Certifications</h3>
+            <p class="subtitle-a mb-4">Professional certifications demonstrating my expertise in various technologies and methodologies.</p>
+          </div>
+          
+          <div class="certifications-container">
+            <a href="img/DevOps Essentials.png" data-lightbox="certs" data-title="DevOps Essentials">
+              <img src="img/DevOps Essentials.png" alt="Certification 1">
+            </a>
+            <a href="img/Cloud Native, DevOps, Agile & NoSQL Essentials.png" data-lightbox="certs" data-title="Cloud Native, DevOps, Agile & NoSQL Essentials">
+              <img src="img/Cloud Native, DevOps, Agile & NoSQL Essentials.png" alt="Certification 2">
+            </a>
+            <a href="img/Cloud Architecture and Infrastructure.png" data-lightbox="certs" data-title="Cloud Architecture and Infrastructure">
+              <img src="img/Cloud Architecture and Infrastructure.png" alt="Certification 3">
+            </a>
+            <a href="img/Git and GitHub Essentials.png" data-lightbox="certs" data-title="Git and GitHub Essentials">
+              <img src="img/Git and GitHub Essentials.png" alt="Certification 4">
+            </a>
+            <a href="img/Software Engineering Essentials.png" data-lightbox="certs" data-title="Software Engineering Essentials">
+              <img src="img/Software Engineering Essentials.png" alt="Certification 5">
+            </a>
+            <a href="img/Artificial Interligence.png" data-lightbox="certs" data-title="Artificial Intelligence">
+              <img src="img/Artificial Interligence.png" alt="Certification 6">
+            </a>
+            <a href="img/AZ-900.png" data-lightbox="certs" data-title="AZ-900 Certification">
+              <img src="img/AZ-900.png" alt="Certification 8">
+            </a>
+            <a href="img/66-alx-aice-ai-career-essentials-certificate-thapelo-lekhuane.png" data-lightbox="certs" data-title="AI Career Essentials">
+              <img src="img/66-alx-aice-ai-career-essentials-certificate-thapelo-lekhuane.png" alt="Certification 7">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <!--Certifications section Ends here-->
 
 
 
-  <!--/ Section Blog Start /-->
-<section id="blog" class="blog-mf sect-pt4 route">
+  <!--/ Section Hustles Start /-->
+<section id="hustles" class="blog-mf sect-pt4 route">
   <div class="container">
-      <div class="row">
-          <div class="col-sm-12">
-              <div class="title-box text-center">
-                  <h3 class="title-a">Blog</h3>
-                  <p class="subtitle-a">Insights and tutorials on Software Engineering, DevOps, and Cloud Computing.</p>
-                  <div class="line-mf"></div>
-              </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full p-4">
+          <!-- Title -->
+          <div class="text-center mb-4">
+            <h3 class="title-left">My Hustles</h3>
+            <p class="subtitle-a mb-4">Diverse business ventures and personal interests that showcase my entrepreneurial spirit and work ethic.</p>
           </div>
-      </div>
-      <div class="row">
-          <style>
-              .card-img img {
+          
+          <!-- Hustles Timeline -->
+          <div class="timeline">
+            <style>
+              .timeline {
+                position: relative;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 60px 0;
+              }
+              
+              .timeline::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                background-color: #007bff;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+              
+              .timeline-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 120px;
+                position: relative;
+              }
+              
+              .timeline-content {
+                width: 40%;
+                background: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                min-height: 220px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              }
+              
+              .timeline-content.left {
+                margin-right: 10%;
+              }
+              
+              .timeline-content.right {
+                margin-left: 10%;
+              }
+              
+              .timeline-content h4 {
+                color: #007bff;
+                margin-bottom: 12px;
+                font-size: 1.3rem;
+                font-weight: 600;
+              }
+              
+              .timeline-content h5 {
+                color: #666;
+                margin-bottom: 18px;
+                font-size: 1.1rem;
+                font-weight: 500;
+              }
+              
+              .timeline-content p {
+                color: #333;
+                line-height: 1.7;
+                margin-bottom: 0;
+                font-size: 1rem;
+              }
+              
+              .carousel {
+                width: 40%;
+                height: 320px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              }
+              
+              .carousel img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                transition: left 0.8s ease;
+                background-color: #f8f9fa;
+              }
+              
+              .carousel img.active {
+                left: 0;
+              }
+              
+              .carousel img.prev {
+                left: -100%;
+              }
+              
+              .carousel:hover img {
+                animation-play-state: paused;
+              }
+              
+              .timeline-marker {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: #007bff;
+                border-radius: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 40px;
+                border: 4px solid #fff;
+                box-shadow: 0 0 0 3px #007bff;
+                z-index: 10;
+              }
+              
+              @media (max-width: 768px) {
+                .timeline::after {
+                  left: 20px;
+                }
+                
+                .timeline-item {
+                  flex-direction: column;
+                  align-items: flex-start;
+                  margin-left: 40px;
+                  margin-bottom: 80px;
+                }
+                
+                .timeline-content {
                   width: 100%;
-                  height: 250px;
-                  object-fit: cover;
-                  border-radius: 5px;
+                  margin-right: 0;
+                  margin-left: 0;
+                  margin-bottom: 25px;
+                  min-height: auto;
+                }
+                
+                .carousel {
+                  width: 100%;
+                  height: 280px;
+                }
+                
+                .timeline-content.left, .timeline-content.right {
+                  margin-left: 0;
+                }
+                
+                .timeline-marker {
+                  left: 20px;
+                }
               }
-              .card-blog {
-                  margin-bottom: 30px;
-                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                  border-radius: 10px;
-                  overflow: hidden;
-                  background: #fff;
-              }
-              .card-body {
-                  padding: 15px;
-                  text-align: center;
-              }
-              .card-title {
-                  font-size: 18px;
-                  font-weight: bold;
-              }
-              .card-description {
-                  font-size: 14px;
-                  color: #666;
-              }
-          </style>
-          
-          <!-- Blog Post 1: DevOps Best Practices -->
-          <div class="col-md-4">
-              <div class="card card-blog">
-                  <div class="card-img">
-                      <a href="blog-devops-best-practices.html">
-                          <img src="img/DevOps-Best-Practices.jpg" alt="DevOps Best Practices" class="img-fluid">
-                      </a>
-                  </div>
-                  <div class="card-body">
-                      <h3 class="card-title"><a href="blog-devops-best-practices.html">DevOps Best Practices for Faster Deployments</a></h3>
-                      <p class="card-description">
-                          Learn how to streamline your CI/CD pipeline, improve deployment speed, and enhance system reliability with DevOps best practices.
-                      </p>
-                  </div>
+            </style>
+            
+            <!-- Hustle 1: Road Maintenance & Mining Road Signage -->
+            <div class="timeline-item">
+              <div class="timeline-content left">
+                <h4>Road Maintenance & Mining Road Signage</h4>
+                <h5>Motau Mining Solutions</h5>
+                <p>Installation and maintenance of mining road signage to enhance safety and compliance on-site. Services included ground preparation, proper placement of durable signs, and ensuring visibility for operational efficiency and hazard prevention.</p>
               </div>
+              <div class="timeline-marker"></div>
+              <div class="carousel right" data-delay="0">
+                <img src="img/ROAD1.jpg" alt="Road Signage 1">
+                <img src="img/ROAD2.jpg" alt="Road Signage 2">
+                <img src="img/ROAD3.jpg" alt="Road Signage 3">
+                <img src="img/ROAD4.jpg" alt="Road Signage 4">
+                <img src="img/ROAD5.jpg" alt="Road Signage 5">
+                <img src="img/ROAD6.jpg" alt="Road Signage 6">
+                <img src="img/ROAD7.jpg" alt="Road Signage 7">
+                <img src="img/ROAD8.jpg" alt="Road Signage 8">
+              </div>
+            </div>
+            
+            <!-- Hustle 2: PPE Supply & Embroidery -->
+            <div class="timeline-item">
+              <div class="timeline-content right">
+                <h4>PPE Supply & Embroidery</h4>
+                <h5>Motau Mining Solutions</h5>
+                <p>Provision of high-quality Personal Protective Equipment (PPE) with custom embroidery services for branding and identification. All items were tailored to meet mining safety standards while representing the company professionally.</p>
+              </div>
+              <div class="timeline-marker"></div>
+              <div class="carousel left" data-delay="1">
+                <img src="img/PPE1.jpg" alt="PPE 1">
+                <img src="img/PPE2.jpg" alt="PPE 2">
+                <img src="img/PPE3.jpg" alt="PPE 3">
+                <img src="img/PPE4.jpg" alt="PPE 4">
+                <img src="img/PPE5.jpg" alt="PPE 5">
+                <img src="img/PPE6.jpg" alt="PPE 6">
+                <img src="img/PPE7.jpg" alt="PPE 7">
+                <img src="img/PPE8.jpg" alt="PPE 8">
+              </div>
+            </div>
+            
+            <!-- Hustle 3: Security Services -->
+            <div class="timeline-item">
+              <div class="timeline-content left">
+                <h4>Security Services</h4>
+                <h5>Dinkwe LKH Tactical Response</h5>
+                <p>A trusted security company delivering both armed and unarmed guarding services. Also offers professional escort services, CCTV camera installations, and electric fencing for robust property and personnel protection.</p>
+              </div>
+              <div class="timeline-marker"></div>
+              <div class="carousel right" data-delay="2">
+                <img src="img/SEC1.jpg" alt="Security 1">
+                <img src="img/SEC2.jpg" alt="Security 2">
+                <img src="img/SEC3.jpg" alt="Security 3">
+                <img src="img/SEC4.jpg" alt="Security 4">
+                <img src="img/SEC5.jpg" alt="Security 5">
+                <img src="img/SEC6.jpg" alt="Security 6">
+              </div>
+            </div>
+            
+            <!-- Hobbies & Personality -->
+            <div class="timeline-item">
+              <div class="timeline-content right">
+                <h4>Hobbies & Personality</h4>
+                <p>I'm a soft-spoken, family-oriented guy who enjoys good conversations and quality time with loved ones. I'm passionate about FIFA and movies, and I approach both work and play with full commitment — when I play, I play hard; when I work, I work even harder.</p>
+              </div>
+              <div class="timeline-marker"></div>
+              <div class="carousel left" data-delay="3">
+                <img src="img/HB1 (1).jpg" alt="Hobby 1">
+                <img src="img/HB1 (2).jpg" alt="Hobby 2">
+                <img src="img/HB1 (3).jpg" alt="Hobby 3">
+                <img src="img/HB1 (4).jpg" alt="Hobby 4">
+                <img src="img/HB1 (5).jpg" alt="Hobby 5">
+                <img src="img/HB1 (6).jpg" alt="Hobby 6">
+                <img src="img/HB1 (7).jpg" alt="Hobby 7">
+                <img src="img/HB1 (8).jpg" alt="Hobby 8">
+                <img src="img/HB1 (9).jpg" alt="Hobby 9">
+              </div>
+            </div>
           </div>
           
-          <!-- Blog Post 2: Docker & Kubernetes -->
-          <div class="col-md-4">
-              <div class="card card-blog">
-                  <div class="card-img">
-                      <a href="blog-docker-kubernetes.html">
-                          <img src="img/docker&kuber.jpg" alt="Docker & Kubernetes" class="img-fluid">
-                      </a>
-                  </div>
-                  <div class="card-body">
-                      <h3 class="card-title"><a href="blog-docker-kubernetes.html">Getting Started with Docker & Kubernetes</a></h3>
-                      <p class="card-description">
-                          A beginner-friendly guide to containerization and orchestration using Docker and Kubernetes for scalable applications.
-                      </p>
-                  </div>
-              </div>
-          </div>
+          <!-- Carousel JavaScript -->
+          <script>
+            // Carousel Logic with different timing
+            document.querySelectorAll('.carousel').forEach((carousel, index) => {
+              const images = carousel.querySelectorAll('img');
+              let currentIndex = 0;
+              const delay = parseInt(carousel.dataset.delay) || 0;
+              const interval = 4000 + (delay * 1000); // Different intervals for each carousel
+
+              function updateCarousel() {
+                images.forEach((img, i) => {
+                  img.classList.remove('active', 'prev');
+                  if (i === currentIndex) {
+                    img.classList.add('active');
+                  } else if (i === (currentIndex - 1 + images.length) % images.length) {
+                    img.classList.add('prev');
+                  }
+                });
+              }
+
+              // Start carousel after delay
+              setTimeout(() => {
+                setInterval(() => {
+                  if (!carousel.matches(':hover')) {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateCarousel();
+                  }
+                }, interval);
+              }, delay * 1000);
+
+              updateCarousel();
+            });
+          </script>
           
-          <!-- Blog Post 3: Automating Infrastructure -->
-          <div class="col-md-4">
-              <div class="card card-blog">
-                  <div class="card-img">
-                      <a href="blog-infrastructure-automation.html">
-                          <img src="img/automation & ansile.jpg" alt="Infrastructure Automation" class="img-fluid">
-                      </a>
-                  </div>
-                  <div class="card-body">
-                      <h3 class="card-title"><a href="blog-infrastructure-automation.html">Automating Infrastructure with Terraform & Ansible</a></h3>
-                      <p class="card-description">
-                          Discover how Terraform and Ansible can automate cloud infrastructure provisioning, making deployments efficient and scalable.
-                      </p>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
+    </div>
   </div>
 </section>
-<!--/ Section Blog End /-->
+<!--/ Section Hustles End /-->
 
 
 
@@ -759,31 +1383,31 @@
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
-                      <div id="sendmessage">Your message has been sent. Thank you!</div>
-                      <div id="errormessage"></div>
+                    <form action="https://formspree.io/f/mdkzyyqz" method="POST" id="contactForm" class="contactForm">
+                      <div id="sendmessage" style="display: none; color: #28a745; font-weight: bold; margin-bottom: 15px;">Your message has been sent. Thank you!</div>
+                      <div id="errormessage" style="display: none; color: #dc3545; font-weight: bold; margin-bottom: 15px;"></div>
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Your Email" required />
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                              <div class="validation"></div>
-                            </div>
+                          <div class="form-group">
+                            <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required />
+                            <div class="validation"></div>
+                          </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Message" required></textarea>
                             <div class="validation"></div>
                           </div>
                         </div>
@@ -806,7 +1430,7 @@
                     </p>
                     <ul class="list-ico">
                       <li><span class="ion-ios-location"></span> 1632, Gauteng hospital view Mayibuye Cres.</li>
-                      <li><span class="ion-ios-telephone"></span> +27-636-65-831</li>
+                      <li><span class="ion-ios-telephone"></span> 0636165831</li>
                       <li><span class="ion-email"></span> thapelolekhuane2@gmail.com</li>
                     </ul>
                   </div>
@@ -873,10 +1497,97 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+  <!-- Navbar Scroll Effect -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Ensure navbar starts transparent
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.remove('scrolled');
+    });
+  </script>
 
+  <!-- Contact Form Reset Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      
+      // Listen for form submission
+      form.addEventListener('submit', function(e) {
+        // Let Formspree handle the submission
+        // We'll reset the form after a short delay to allow Formspree to process
+        setTimeout(function() {
+          // Reset all form fields
+          form.reset();
+          
+          // Clear any validation messages
+          const validationDivs = form.querySelectorAll('.validation');
+          validationDivs.forEach(function(div) {
+            div.innerHTML = '';
+          });
+          
+          // Show success message briefly
+          const sendMessage = document.getElementById('sendmessage');
+          if (sendMessage) {
+            sendMessage.style.display = 'block';
+            setTimeout(function() {
+              sendMessage.style.display = 'none';
+            }, 3000);
+          }
+        }, 1000);
+      });
+    });
+  </script>
 
-  
-</script>
-</script>
+<!-- Resume Modal -->
+<div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resumeModalLabel">My Resume</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex flex-column align-items-center justify-content-center" style="overflow:auto;">
+        <img src="img/resume-page-1.png" alt="Resume Page 1" class="img-fluid mb-4" style="max-width:900px; width:100%; height:auto; box-shadow:0 2px 16px rgba(0,0,0,0.2);">
+        <img src="img/resume-page-2.png" alt="Resume Page 2" class="img-fluid" style="max-width:900px; width:100%; height:auto; box-shadow:0 2px 16px rgba(0,0,0,0.2);">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal-fullscreen {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-content {
+    height: 100vh;
+    border-radius: 0;
+  }
+  .modal-body {
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    background: #f8f9fa;
+  }
+  @media (max-width: 900px) {
+    .modal-body img {
+      max-width: 100vw;
+    }
+  }
+</style>
+
 </body>
 </html>
