@@ -1210,6 +1210,35 @@
                 z-index: 10;
               }
               
+              .timeline-marker::after {
+                content: attr(data-year);
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #007bff;
+                color: white;
+                padding: 3px 6px;
+                border-radius: 12px;
+                font-size: 11px;
+                font-weight: 600;
+                white-space: nowrap;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              }
+              
+              .timeline-marker::before {
+                content: '';
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid #007bff;
+              }
+              
               @media (max-width: 768px) {
                 .timeline::after {
                   left: 20px;
@@ -1242,6 +1271,18 @@
                 .timeline-marker {
                   left: 20px;
                 }
+                
+                .timeline-marker::after {
+                  left: 50%;
+                  transform: translateX(-50%);
+                  font-size: 11px;
+                  padding: 3px 6px;
+                }
+                
+                .timeline-marker::before {
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
               }
             </style>
             
@@ -1252,7 +1293,7 @@
                 <h5>Motau Mining Solutions • 2023</h5>
                 <p>Installation and maintenance of mining road signage to enhance safety and compliance on-site. Services included ground preparation, proper placement of durable signs, and ensuring visibility for operational efficiency and hazard prevention.</p>
               </div>
-              <div class="timeline-marker"></div>
+              <div class="timeline-marker" data-year="2023"></div>
               <div class="carousel right" data-delay="0">
                 <img src="img/ROAD1.jpg" alt="Road Signage 1">
                 <img src="img/ROAD2.jpg" alt="Road Signage 2">
@@ -1272,7 +1313,7 @@
                 <h5>Motau Mining Solutions • 2023</h5>
                 <p>Provision of high-quality Personal Protective Equipment (PPE) with custom embroidery services for branding and identification. All items were tailored to meet mining safety standards while representing the company professionally.</p>
               </div>
-              <div class="timeline-marker"></div>
+              <div class="timeline-marker" data-year="2023"></div>
               <div class="carousel left" data-delay="1">
                 <img src="img/PPE1.jpg" alt="PPE 1">
                 <img src="img/PPE2.jpg" alt="PPE 2">
@@ -1292,7 +1333,7 @@
                 <h5>Dinkwe LKH Tactical Response • 2024</h5>
                 <p>A trusted security company delivering both armed and unarmed guarding services. Also offers professional escort services, CCTV camera installations, and electric fencing for robust property and personnel protection.</p>
               </div>
-              <div class="timeline-marker"></div>
+              <div class="timeline-marker" data-year="2024"></div>
               <div class="carousel right" data-delay="2">
                 <img src="img/SEC1.jpg" alt="Security 1">
                 <img src="img/SEC2.jpg" alt="Security 2">
@@ -1310,7 +1351,7 @@
                 <h5>Personal Interests • 2025</h5>
                 <p>I'm a soft-spoken, family-oriented guy who enjoys good conversations and quality time with loved ones. I'm passionate about FIFA and movies, and I approach both work and play with full commitment — when I play, I play hard; when I work, I work even harder.</p>
               </div>
-              <div class="timeline-marker"></div>
+              <div class="timeline-marker" data-year="2025"></div>
               <div class="carousel left" data-delay="3">
                 <img src="img/HB1 (1).jpg" alt="Hobby 1">
                 <img src="img/HB1 (2).jpg" alt="Hobby 2">
