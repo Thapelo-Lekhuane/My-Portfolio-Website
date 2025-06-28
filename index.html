@@ -7,6 +7,12 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
+  <!-- Enhanced Mobile Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#007bff">
+
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -205,212 +211,689 @@
 
     .bot-message {
         background: #f1f1f1;
-        color: black;
+        color: #333;
         align-self: flex-start;
     }
 
     .chat-input {
         display: flex;
         padding: 10px;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid #eee;
     }
 
     .chat-input input {
         flex: 1;
         padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-right: 8px;
     }
 
     .chat-input button {
+        padding: 8px 16px;
         background: #007bff;
         color: white;
         border: none;
-        padding: 8px 12px;
-        margin-left: 5px;
-        border-radius: 5px;
+        border-radius: 4px;
         cursor: pointer;
     }
 
-    .chat-input button:hover {
-        background: #0056b3;
+    /* Comprehensive Responsive Design */
+    @media (max-width: 1200px) {
+        .container {
+            max-width: 960px;
+        }
+        
+        .timeline-content {
+            width: 45%;
+        }
+        
+        .project-image {
+            width: 30%;
+        }
     }
 
-    /* Improve work section visibility */
-    .work-box {
-      background-color: #ffffff !important;
-      border: 1px solid #e9ecef;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .work-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-    }
-    
-    .work-content {
-      background-color: #ffffff !important;
-      color: #333 !important;
-    }
-    
-    .w-title {
-      color: #333 !important;
-      font-weight: 600;
-    }
-    
-    .w-more {
-      color: #666 !important;
-    }
-    
-    /* Ensure work images are properly visible */
-    .work-img img {
-      border-radius: 8px 8px 0 0;
-      transition: transform 0.3s ease;
-    }
-    
-    .work-box:hover .work-img img {
-      transform: scale(1.05);
+    @media (max-width: 992px) {
+        .container {
+            max-width: 720px;
+        }
+        
+        .navbar-nav {
+            text-align: center;
+        }
+        
+        .navbar-collapse {
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        
+        .timeline::after {
+            left: 30px;
+        }
+        
+        .timeline-item {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .timeline-content {
+            width: 100%;
+            margin: 0 0 20px 0;
+            min-height: auto;
+        }
+        
+        .carousel {
+            width: 100%;
+            height: 250px;
+        }
+        
+        .project-image {
+            width: 48%;
+            margin: 1%;
+        }
+        
+        .timeline-marker {
+            left: 30px;
+        }
+        
+        .certifications-container {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .about-description {
+            text-align: center;
+        }
+        
+        .service-box {
+            margin-bottom: 30px;
+        }
     }
 
-    /* Fix counter section text colors */
-    .counter-box {
-      background-color: #ffffff !important;
-      color: #333 !important;
+    @media (max-width: 768px) {
+        .container {
+            max-width: 540px;
+        }
+        
+        /* Mobile Navigation */
+        .navbar-brand {
+            font-size: 1.2rem;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            padding: 0.25rem 0.5rem;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        /* Mobile Typography */
+        .title-left {
+            font-size: 1.5rem;
+        }
+        
+        .subtitle-a {
+            font-size: 1rem;
+        }
+        
+        /* Mobile Layout Adjustments */
+        .intro {
+            padding: 100px 0 50px 0;
+        }
+        
+        .intro h2 {
+            font-size: 2rem;
+        }
+        
+        .intro p {
+            font-size: 1rem;
+        }
+        
+        /* Mobile Timeline */
+        .timeline::after {
+            left: 20px;
+        }
+        
+        .timeline-item {
+            margin-left: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-content {
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1rem;
+        }
+        
+        .timeline-content h5 {
+            font-size: 0.9rem;
+        }
+        
+        .timeline-marker {
+            left: 20px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .timeline-marker::after {
+            font-size: 10px;
+            padding: 2px 6px;
+        }
+        
+        /* Mobile Project Images */
+        .project-image {
+            width: 100%;
+            height: 120px;
+            margin: 10px 0;
+        }
+        
+        .project-image .view-overlay {
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Certifications */
+        .certifications-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        /* Mobile Contact Form */
+        .contact-form {
+            padding: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            font-size: 16px; /* Prevents zoom on iOS */
+        }
+        
+        /* Mobile Chatbot */
+        .chatbot {
+            width: 280px;
+            right: 10px;
+            bottom: 10px;
+        }
+        
+        .chat-body {
+            height: 250px;
+        }
+        
+        /* Mobile Service Boxes */
+        .service-box {
+            padding: 20px;
+        }
+        
+        .service-box .service-ico {
+            margin-bottom: 15px;
+        }
+        
+        .service-box .s-title {
+            font-size: 1.1rem;
+        }
+        
+        .service-box .s-description {
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile About Section */
+        .about-description img {
+            width: 150px;
+            height: 150px;
+        }
+        
+        /* Mobile Experience Section */
+        .experience-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .experience-header .badge {
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+        
+        .experience-details {
+            padding-left: 15px;
+        }
+        
+        .experience-details li {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+        
+        /* Extra Small Mobile Adjustments */
+        .intro h2 {
+            font-size: 1.8rem;
+        }
+        
+        .intro p {
+            font-size: 0.9rem;
+        }
+        
+        .title-left {
+            font-size: 1.3rem;
+        }
+        
+        .subtitle-a {
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Timeline Adjustments */
+        .timeline-content {
+            padding: 12px;
+            font-size: 0.85rem;
+        }
+        
+        .timeline-content h4 {
+            font-size: 0.95rem;
+        }
+        
+        .timeline-content h5 {
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Project Images */
+        .project-image {
+            height: 100px;
+        }
+        
+        .project-image .view-overlay {
+            font-size: 0.8rem;
+        }
+        
+        /* Mobile Certifications */
+        .certifications-container {
+            gap: 10px;
+        }
+        
+        /* Mobile Contact Form */
+        .contact-form {
+            padding: 15px;
+        }
+        
+        /* Mobile Chatbot */
+        .chatbot {
+            width: 260px;
+            right: 5px;
+            bottom: 5px;
+        }
+        
+        .chat-toggle {
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+        }
+        
+        /* Mobile Service Boxes */
+        .service-box {
+            padding: 15px;
+        }
+        
+        .service-box .s-title {
+            font-size: 1rem;
+        }
+        
+        .service-box .s-description {
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile About Section */
+        .about-description img {
+            width: 120px;
+            height: 120px;
+        }
+        
+        /* Mobile Experience Section */
+        .experience-details li {
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Navigation */
+        .navbar-brand {
+            font-size: 1.1rem;
+        }
+        
+        /* Mobile Footer */
+        .footer-paralax {
+            padding: 30px 0;
+        }
+        
+        .footer-paralax h3 {
+            font-size: 1.2rem;
+        }
+        
+        .footer-paralax p {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Landscape Mobile Adjustments */
+    @media (max-width: 768px) and (orientation: landscape) {
+        .intro {
+            padding: 60px 0 30px 0;
+        }
+        
+        .intro h2 {
+            font-size: 1.8rem;
+        }
+        
+        .timeline-content {
+            min-height: 120px;
+        }
+        
+        .carousel {
+            height: 200px;
+        }
+    }
+
+    /* High DPI Displays */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .intro {
+            background-image: url('img/intro-bg.jpg');
+            background-size: cover;
+        }
+    }
+
+    /* Touch Device Optimizations */
+    @media (hover: none) and (pointer: coarse) {
+        .service-box:hover,
+        .work-box:hover,
+        .project-image:hover {
+            transform: none;
+        }
+        
+        .navbar .nav-link:hover {
+            color: #007bff !important;
+        }
+        
+        .btn:hover {
+            transform: none;
+        }
+        
+        /* Better touch targets for mobile */
+        .navbar .nav-link {
+            padding: 12px 15px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn {
+            min-height: 44px;
+            padding: 12px 20px;
+        }
+        
+        .chatbot-toggle {
+            min-width: 50px;
+            min-height: 50px;
+        }
+        
+        /* Mobile-friendly form inputs */
+        input, textarea, select {
+            font-size: 16px !important;
+            min-height: 44px;
+        }
+        
+        /* Mobile-friendly buttons */
+        .btn-primary,
+        .btn-outline-primary {
+            min-height: 44px;
+            padding: 12px 24px;
+        }
+    }
+
+    /* Mobile Navigation Enhancements */
+    @media (max-width: 768px) {
+        .navbar-collapse {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 0 0 15px 15px;
+            padding: 20px;
+            z-index: 1000;
+        }
+        
+        .navbar-nav {
+            gap: 10px;
+        }
+        
+        .navbar-nav .nav-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .navbar-nav .nav-item:last-child {
+            border-bottom: none;
+        }
+        
+        .navbar-nav .nav-link {
+            padding: 15px 0;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px 10px;
+        }
+        
+        /* Mobile hamburger menu */
+        .navbar-toggler {
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 8px 12px;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        
+        .navbar-toggler span {
+            background-color: #fff;
+            height: 2px;
+            border-radius: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler.collapsed span:nth-child(1) {
+            transform: rotate(0deg);
+        }
+        
+        .navbar-toggler.collapsed span:nth-child(2) {
+            opacity: 1;
+        }
+        
+        .navbar-toggler.collapsed span:nth-child(3) {
+            transform: rotate(0deg);
+        }
+        
+        .navbar-toggler:not(.collapsed) span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .navbar-toggler:not(.collapsed) span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .navbar-toggler:not(.collapsed) span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    }
+
+    /* Mobile Performance Optimizations */
+    @media (max-width: 768px) {
+        /* Reduce animations on mobile for better performance */
+        .animate__animated {
+            animation-duration: 0.6s !important;
+        }
+        
+        /* Optimize images for mobile */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Reduce box shadows on mobile for better performance */
+        .box-shadow-full {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        /* Optimize carousel for mobile */
+        .carousel img {
+            object-fit: cover;
+        }
+        
+        /* Mobile-friendly spacing */
+        .section-padding {
+            padding: 40px 0;
+        }
+        
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        
+        .mt-4 {
+            margin-top: 1.5rem !important;
+        }
+    }
+
+    /* Mobile Accessibility Improvements */
+    @media (max-width: 768px) {
+        /* Better focus indicators for mobile */
+        .nav-link:focus,
+        .btn:focus,
+        input:focus,
+        textarea:focus {
+            outline: 2px solid #007bff;
+            outline-offset: 2px;
+        }
+        
+        /* Larger touch targets */
+        .service-box,
+        .work-box,
+        .project-image {
+            cursor: pointer;
+            min-height: 44px;
+        }
+        
+        /* Better contrast for mobile */
+        .text-muted {
+            color: #6c757d !important;
+        }
+        
+        /* Mobile-friendly font sizes */
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.75rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+    }
+
+    /* Print Styles */
+    @media print {
+        .navbar,
+        .chatbot-container,
+        .footer-paralax {
+            display: none !important;
+        }
+        
+        .intro {
+            background: none !important;
+            color: #000 !important;
+        }
+        
+        .box-shadow-full {
+            box-shadow: none !important;
+            border: 1px solid #ccc !important;
+        }
+    }
+
+    /* Enhanced landing page overlay for better text visibility */
+    .overlay-itro {
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
     }
     
-    .counter-box .counter-ico {
-      background-color: #007bff !important;
-      color: #ffffff !important;
+    .intro-content {
+      position: relative;
+      z-index: 2;
     }
     
-    .counter-box .counter-num {
-      color: #333 !important;
-      font-weight: bold;
+    /* Enhanced text shadows for better readability */
+    .intro-title {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: -0.5px;
     }
     
-    .counter-box .counter-text {
-      color: #666 !important;
+    .intro-subtitle {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: -0.3px;
     }
     
-    /* Fix service section text colors */
-    .service-box {
-      background-color: #ffffff !important;
-      color: #333 !important;
+    /* Responsive text sizing for mobile */
+    @media (max-width: 768px) {
+      .intro-title {
+        font-size: 1.2rem;
+        letter-spacing: -0.3px;
+      }
+      
+      .intro-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: -0.2px;
+      }
     }
     
-    .service-box .service-ico {
-      background-color: #007bff !important;
-      color: #ffffff !important;
+    @media (max-width: 576px) {
+      .intro-title {
+        font-size: 1rem;
+        letter-spacing: -0.2px;
+      }
+      
+      .intro-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: -0.1px;
+      }
     }
     
-    .service-box .s-title {
-      color: #333 !important;
-    }
-    
-    .service-box .s-description {
-      color: #666 !important;
-    }
-    
-    /* Fix testimonial section text colors */
-    .testimonial-box {
-      background-color: #ffffff !important;
-      color: #333 !important;
-    }
-    
-    .testimonial-box .description {
-      color: #333 !important;
-    }
-    
-    .testimonial-box .author-test {
-      color: #333 !important;
-    }
-    
-    .testimonial-box .comit {
-      color: #007bff !important;
-    }
-    
-    /* Certifications section styling */
-    .certifications-section {
-      background-color: #f8f9fa !important;
-    }
-    
-    .certifications-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px 0;
-    }
-    
-    .certifications-container a {
-      display: block;
-      border: 3px solid #007bff;
-      border-radius: 10px;
+    /* Ensure intro section has proper positioning */
+    .intro {
+      position: relative;
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .certifications-container a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
-      border-color: #0056b3;
-    }
-    
-    .certifications-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    
-    .certifications-container a:hover img {
-      transform: scale(1.05);
-    }
-    
-    /* Service box improvements */
-    .service-box {
-      padding: 30px 20px;
-      text-align: center;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-    }
-    
-    .service-ico {
-      margin-bottom: 20px;
-    }
-    
-    .ico-circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: #007bff !important;
-      color: #ffffff !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      font-size: 30px;
-      transition: transform 0.3s ease;
-    }
-    
-    .service-box:hover .ico-circle {
-      transform: scale(1.1);
-    }
-    
-    /* Override certifications section to match consistent styling */
-    .certifications-section {
-      background-color: #e5e7eb !important;
-    }
-    
-    .certifications-section .box-shadow-full {
-      background-color: #ffffff !important;
     }
 </style>
 </head>
@@ -1859,6 +2342,193 @@
     }
   }
 </style>
+
+<!-- Mobile Experience Enhancements -->
+<script>
+  // Mobile navigation improvements
+  document.addEventListener('DOMContentLoaded', function() {
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navbarCollapse.classList.remove('show');
+          navbarToggler.classList.add('collapsed');
+          navbarToggler.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+    
+    // Smooth scrolling for mobile
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Touch gesture support for mobile
+    let touchStartY = 0;
+    let touchEndY = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+      touchStartY = e.changedTouches[0].screenY;
+    });
+    
+    document.addEventListener('touchend', function(e) {
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    });
+    
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartY - touchEndY;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe up - could be used for navigation
+          console.log('Swipe up detected');
+        } else {
+          // Swipe down - could be used for navigation
+          console.log('Swipe down detected');
+        }
+      }
+    }
+    
+    // Mobile performance optimizations
+    if (window.innerWidth <= 768) {
+      // Reduce animation complexity on mobile
+      const animatedElements = document.querySelectorAll('.animate__animated');
+      animatedElements.forEach(el => {
+        el.style.animationDuration = '0.6s';
+      });
+      
+      // Lazy load images for better mobile performance
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+          }
+        });
+      });
+      
+      images.forEach(img => imageObserver.observe(img));
+    }
+    
+    // Mobile-friendly form handling
+    const contactForm = document.querySelector('.contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        // Prevent zoom on iOS when focusing on inputs
+        const inputs = this.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+          input.addEventListener('focus', function() {
+            if (window.innerWidth <= 768) {
+              setTimeout(() => {
+                this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }, 300);
+            }
+          });
+        });
+      });
+    }
+    
+    // Mobile viewport height fix for iOS
+    function setVH() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+    
+    // Mobile-friendly scroll behavior
+    let isScrolling = false;
+    window.addEventListener('scroll', function() {
+      if (!isScrolling) {
+        isScrolling = true;
+        requestAnimationFrame(function() {
+          // Handle scroll events here
+          isScrolling = false;
+        });
+      }
+    });
+    
+    // Mobile keyboard handling
+    window.addEventListener('resize', function() {
+      if (window.innerHeight < window.innerWidth) {
+        // Landscape mode
+        document.body.classList.add('landscape');
+      } else {
+        // Portrait mode
+        document.body.classList.remove('landscape');
+      }
+    });
+  });
+  
+  // Mobile-specific utility functions
+  const MobileUtils = {
+    // Check if device is mobile
+    isMobile: () => {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    },
+    
+    // Check if device supports touch
+    isTouchDevice: () => {
+      return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    },
+    
+    // Get mobile device type
+    getDeviceType: () => {
+      const ua = navigator.userAgent;
+      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return 'tablet';
+      }
+      if (/mobile|android|iphone|ipod|blackberry|opera mini|iemobile/i.test(ua)) {
+        return 'mobile';
+      }
+      return 'desktop';
+    },
+    
+    // Optimize for mobile performance
+    optimizeForMobile: () => {
+      if (MobileUtils.isMobile()) {
+        // Reduce motion for users who prefer it
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.body.style.setProperty('--animation-duration', '0.1s');
+        }
+        
+        // Optimize images
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          if (!img.loading) {
+            img.loading = 'lazy';
+          }
+        });
+      }
+    }
+  };
+  
+  // Initialize mobile optimizations
+  MobileUtils.optimizeForMobile();
+</script>
 
 </body>
 </html>
