@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>THAPELO LEKHUANE'S SITE</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
@@ -341,7 +341,8 @@
 
     @media (max-width: 768px) {
         .container {
-            max-width: 540px;
+            max-width: 100%;
+            padding: 0 15px;
         }
         
         /* Mobile Navigation */
@@ -422,7 +423,7 @@
         }
         
         .project-image .view-overlay {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
         /* Mobile Certifications */
@@ -921,6 +922,58 @@
       overflow: hidden;
     }
 
+    /* Mobile-specific styles for intro section */
+    @media (max-width: 768px) {
+      /* Center the intro section */
+      .intro {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 0 15px !important;
+      }
+      
+      /* Center the content */
+      .intro-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+      }
+      
+      /* Adjust title */
+      .intro-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+        width: 100% !important;
+        text-align: center !important;
+        display: block !important;
+      }
+      
+      /* Adjust subtitle */
+      .intro-subtitle {
+        font-size: 1.2rem !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+        display: block !important;
+      }
+    }
+    
+    /* For very small devices */
+    @media (max-width: 480px) {
+      .intro-title {
+        font-size: 1.8rem !important;
+      }
+      
+      .intro-subtitle {
+        font-size: 1rem !important;
+      }
+    }
+    
     .carousel {
 </style>
 </head>
@@ -1000,10 +1053,6 @@
               <img src="img/testimonial-2.jpg?v=2" alt="Thapelo Lekhuane"
                 class="rounded-circle shadow border border-primary border-3"
                 style="width: 180px; height: 180px; object-fit: cover; margin-top: -1rem;">
-              <!-- Resume Download Link -->
-              <a href="docs/Thapelo%20Lekhuane%20%20Resume.pdf" class="btn btn-outline-primary mt-3" download>
-                Download my resume
-              </a>
             </div>
 
             <!-- Right: About Info and Skills -->
@@ -2257,7 +2306,7 @@
                     <li><a href="https://github.com/Thapelo-Lekhuane" target="_blank">
                         <span class="ico-circle"><i class="ion-social-github"></i></span>
                     </a></li>
-                    <li><a href="https://www.instagram.com/thapelo_wrldwide?igsh=YzljYTk1ODg3Zg==" target="_blank">
+                    <li><a href="https://www.instagram.com/thapelo_wrldwide?igshid=YzljYTk1ODg3Zg==" target="_blank">
                         <span class="ico-circle"><i class="ion-social-instagram"></i></span>
                     </a></li>
                     </ul>
@@ -2470,26 +2519,18 @@
     
     // Mobile performance optimizations
     if (window.innerWidth <= 768) {
-      // Reduce animation complexity on mobile
-      const animatedElements = document.querySelectorAll('.animate__animated');
-      animatedElements.forEach(el => {
-        el.style.animationDuration = '0.6s';
-      });
+      // Reduce motion for users who prefer it
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.style.setProperty('--animation-duration', '0.1s');
+      }
       
-      // Lazy load images for better mobile performance
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.remove('lazy');
-            observer.unobserve(img);
-          }
-        });
+      // Optimize images
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
       });
-      
-      images.forEach(img => imageObserver.observe(img));
     }
     
     // Mobile-friendly form handling
@@ -2562,7 +2603,7 @@
       if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
         return 'tablet';
       }
-      if (/mobile|android|iphone|ipod|blackberry|opera mini|iemobile/i.test(ua)) {
+      if (/mobile|android|iphone|ipod|blackberry|opera mini/i.test(ua)) {
         return 'mobile';
       }
       return 'desktop';
@@ -2571,18 +2612,26 @@
     // Optimize for mobile performance
     optimizeForMobile: () => {
       if (MobileUtils.isMobile()) {
-        // Reduce motion for users who prefer it
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          document.body.style.setProperty('--animation-duration', '0.1s');
-        }
+        // Reduce animation complexity on mobile
+        const animatedElements = document.querySelectorAll('.animate__animated');
+        animatedElements.forEach(el => {
+          el.style.animationDuration = '0.6s';
+        });
         
         // Optimize images
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-          if (!img.loading) {
-            img.loading = 'lazy';
-          }
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              observer.unobserve(img);
+            }
+          });
         });
+        
+        images.forEach(img => imageObserver.observe(img));
       }
     }
   };
