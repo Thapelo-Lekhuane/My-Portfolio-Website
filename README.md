@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This website showcases my professional experience, projects, certifications, and business ventures. It features a modern, responsive design with interactive elements and a contact form for direct communication.
 
-## 🌟 Features
+##  Features
 
 - **Responsive Design:** Optimized for all devices and screen sizes
 - **Professional Experience Timeline:** Showcasing work history with visual timeline
@@ -95,7 +95,7 @@ My-Portfolio-Website/
 └── pdfjs-dist/              # PDF.js distribution files
 ```
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
