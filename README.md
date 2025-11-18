@@ -216,10 +216,10 @@ Feel free to fork the repository and submit pull requests for improvements!
 
 ## 📞 Contact
 
-- **Email:** [Your Email]
-- **LinkedIn:** [Your LinkedIn]
-- **GitHub:** [Your GitHub]
-- **Portfolio:** [Your Portfolio URL]
+- **Email:** thapelolekhuane2@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/thapelo-lekhuane-4092112b1/
+- **GitHub:** https://github.com/Thapelo-Lekhuane
+- **Portfolio:** https://my-portfolio-website-sigma-beryl.vercel.app/
 
 ---
 
