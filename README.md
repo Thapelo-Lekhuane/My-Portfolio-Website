@@ -132,7 +132,7 @@ My-Portfolio-Website/
    - Point your domain to the web server
    - Configure SSL certificate for HTTPS
 
-## 📱 Sections Overview
+##  Sections Overview
 
 ### Home Section
 - Hero banner with animated text
@@ -174,7 +174,7 @@ My-Portfolio-Website/
 - Contact information
 - Social media links
 
-## 🎨 Customization
+##  Customization
 
 ### Themes
 The portfolio supports multiple color themes:
