@@ -1,4 +1,4 @@
-.# Thapelo Lekhuane - Personal Portfolio Website.
+.Thapelo Lekhuane - Personal Portfolio Website.
 
 Welcome to my personal portfolio! This website showcases my professional experience, projects, certifications, and business ventures. It features a modern, responsive design with interactive elements and a contact form for direct communication.
 
