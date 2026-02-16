@@ -48,6 +48,7 @@ Welcome to my personal portfolio! This website showcases my professional experie
 ```
 My-Portfolio-Website/
 ├── index.html                 # Main portfolio page
+├── mobile/                    # React Native (Expo) mobile app
 ├── blog-single.html          # Blog template page
 ├── contact.php               # Contact form processing
 ├── README.md                 # Project documentation

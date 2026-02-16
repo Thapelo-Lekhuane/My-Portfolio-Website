@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function() {
+      var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      var isSmallScreen = window.innerWidth <= 768;
+      var path = window.location.pathname;
+      var onMobileApp = path.indexOf('mobile/dist') !== -1;
+      if ((isMobile || isSmallScreen) && !onMobileApp) {
+        var basePath = path.split('/').slice(0, -1).filter(Boolean).join('/');
+        var mobileUrl = window.location.origin + (basePath ? '/' + basePath : '') + '/mobile/dist/index.html';
+        window.location.replace(mobileUrl);
+      }
+    })();
+  </script>
   <title>THAPELO LEKHUANE'S SITE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta content="" name="keywords">
@@ -1060,7 +1073,7 @@
               <!-- About Me Description -->
               <div class="about-description mb-4">
                 <h5 class="mb-3">Who I Am</h5>
-                <p class="mb-4">I'm a soft-spoken software engineer with a passion for creating innovative digital solutions. With expertise in JavaScript, React, Node.js, and Firebase, I specialize in building modern, scalable web applications that deliver exceptional user experiences. My approach combines technical excellence with thoughtful communication, ensuring that every project not only meets technical requirements but also exceeds client expectations. I believe in writing clean, maintainable code and staying current with industry best practices to deliver solutions that are both robust and future-proof.</p>
+                <p class="mb-4">I'm a soft-spoken software engineer with a passion for creating innovative digital solutions. With expertise in JavaScript, React, Node.js, C#, ASP.NET Core, and Firebase, I specialize in building modern, scalable web applications that deliver exceptional user experiences. My approach combines technical excellence with thoughtful communication, ensuring that every project not only meets technical requirements but also exceeds client expectations. I believe in writing clean, maintainable code and staying current with industry best practices to deliver solutions that are both robust and future-proof.</p>
               </div>
 
               <div id="skill-rotator-bars" class="fade-box">
@@ -1090,7 +1103,23 @@
               <!-- Experience Timeline -->
               <div class="experience-timeline">
                 
-                <!-- Current Position -->
+                <!-- Lead Engineer YouThryve -->
+                <div class="experience-item mb-4">
+                  <div class="experience-header d-flex justify-content-between align-items-start">
+                    <div>
+                      <h4 class="mb-1">LEAD ENGINEER</h4>
+                      <h5 class="text-primary mb-2">YouThryve Development</h5>
+                    </div>
+                    <span class="badge badge-primary">Nov 2025 - Present</span>
+                  </div>
+                  <ul class="experience-details">
+                    <li>Leading technical development for a platform helping unemployed youth through upskilling and monthly stipends</li>
+                    <li>Architecting and building scalable web solutions</li>
+                    <li>Mentoring and guiding the development team</li>
+                  </ul>
+                </div>
+
+                <!-- Software Engineer Talent Match -->
                 <div class="experience-item mb-4">
                   <div class="experience-header d-flex justify-content-between align-items-start">
                     <div>
@@ -1272,6 +1301,8 @@
     { name: "HTML", level: 85 },
     { name: "CSS3", level: 75 },
     { name: "JavaScript", level: 90 },
+    { name: "C#", level: 80 },
+    { name: "ASP.NET Core", level: 75 },
     { name: "PHP", level: 50 }
   ];
 
@@ -1763,6 +1794,38 @@
               <div class="project-image right">
                 <a href="https://movie-database-application.onrender.com/" target="_blank" rel="noopener noreferrer">
                   <img src="img/Movie-db.png" alt="Movie Database Website">
+                  <span class="view-overlay">Click to View</span>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Project 4: TailorCV -->
+            <div class="timeline-item">
+              <div class="timeline-content right">
+                <h4>TailorCV</h4>
+                <h5>AI Resume Tailoring • August 2025</h5>
+                <p>An AI-powered tool designed to help unemployed people enter the workplace. Uses AI to tailor CVs to job descriptions while preserving important information, making it easier for job seekers to stand out to employers.</p>
+              </div>
+              <div class="timeline-marker" data-year="Aug 2025"></div>
+              <div class="project-image left">
+                <a href="https://tailorcv-2.onrender.com/" target="_blank" rel="noopener noreferrer">
+                  <img src="img/TailorCV.png" alt="TailorCV - AI Resume Tailoring">
+                  <span class="view-overlay">Click to View</span>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Project 5: YouThryve Development -->
+            <div class="timeline-item">
+              <div class="timeline-content left">
+                <h4>YouThryve Development</h4>
+                <h5>Lead Engineer • Nov 2025 - Present</h5>
+                <p>A platform helping unemployed youth by upskilling them and equipping them with necessary skills while supporting them with a monthly stipend. I served as the lead engineer on this project.</p>
+              </div>
+              <div class="timeline-marker" data-year="Nov 2025"></div>
+              <div class="project-image right">
+                <a href="https://youthryvedevelopment.co.za/" target="_blank" rel="noopener noreferrer">
+                  <img src="img/Youthyve developement.png" alt="YouThryve Development">
                   <span class="view-overlay">Click to View</span>
                 </a>
               </div>
@@ -2306,7 +2369,7 @@
                     <li><a href="https://github.com/Thapelo-Lekhuane" target="_blank">
                         <span class="ico-circle"><i class="ion-social-github"></i></span>
                     </a></li>
-                    <li><a href="https://www.instagram.com/thapelo_wrldwide?igshid=YzljYTk1ODg3Zg==" target="_blank">
+                    <li><a href="https://www.instagram.com/thapelo_in_tech/" target="_blank">
                         <span class="ico-circle"><i class="ion-social-instagram"></i></span>
                     </a></li>
                     </ul>
