@@ -1,33 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  Image,
-  Dimensions,
-} from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import { COLORS, SPACING, FONTS } from '../constants/theme';
-import { PROFILE, SKILLS } from '../data/portfolio';
-
-const { width } = Dimensions.get('window');
+import { PROFILE, PROFILE_EXPERTISE, TECH_STACK } from '../data/portfolio';
 
 export default function AboutScreen() {
-  const [skillSet, setSkillSet] = useState(0);
-  const skillSets = [
-    { title: 'Technical Skills', skills: SKILLS.technical },
-    { title: 'Soft Skills', skills: SKILLS.soft },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSkillSet((prev) => (prev + 1) % skillSets.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentSkills = skillSets[skillSet].skills;
-
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.card}>
@@ -42,19 +18,26 @@ export default function AboutScreen() {
             <Text style={styles.description}>{PROFILE.about}</Text>
           </View>
         </View>
-        <View style={styles.skillsSection}>
-          <Text style={styles.skillsTitle}>{skillSets[skillSet].title}</Text>
-          {currentSkills.map((skill) => (
-            <View key={skill.name} style={styles.skillRow}>
-              <Text style={styles.skillName}>{skill.name}</Text>
-              <View style={styles.progressBar}>
-                <View
-                  style={[styles.progressFill, { width: `${skill.level}%` }]}
-                />
+        <View style={styles.expertiseSection}>
+          <Text style={styles.sectionLabel}>Core Expertise</Text>
+          <View style={styles.expertiseList}>
+            {PROFILE_EXPERTISE.map((item) => (
+              <View key={item} style={styles.expertiseItem}>
+                <Text style={styles.expertiseBullet}>•</Text>
+                <Text style={styles.expertiseText}>{item}</Text>
               </View>
-              <Text style={styles.skillLevel}>{skill.level}%</Text>
-            </View>
-          ))}
+            ))}
+          </View>
+        </View>
+        <View style={styles.techSection}>
+          <Text style={styles.sectionLabel}>Tech Stack</Text>
+          <View style={styles.techGrid}>
+            {TECH_STACK.map((tech) => (
+              <View key={tech} style={styles.techBadge}>
+                <Text style={styles.techText}>{tech}</Text>
+              </View>
+            ))}
+          </View>
         </View>
       </View>
     </ScrollView>
@@ -114,45 +97,58 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     lineHeight: 24,
   },
-  skillsSection: {
+  expertiseSection: {
     marginTop: SPACING.lg,
     paddingTop: SPACING.lg,
     borderTopWidth: 1,
     borderTopColor: COLORS.border,
   },
-  skillsTitle: {
+  techSection: {
+    marginTop: SPACING.lg,
+    paddingTop: SPACING.lg,
+    borderTopWidth: 1,
+    borderTopColor: COLORS.border,
+  },
+  sectionLabel: {
     fontSize: FONTS.body,
     fontWeight: '600',
     color: COLORS.text,
     marginBottom: SPACING.md,
   },
-  skillRow: {
+  expertiseList: {
+    gap: SPACING.sm,
+  },
+  expertiseItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: SPACING.sm,
+    marginBottom: SPACING.xs,
   },
-  skillName: {
-    flex: 1,
+  expertiseBullet: {
+    color: COLORS.primary,
+    fontSize: FONTS.body,
+    marginRight: SPACING.sm,
+  },
+  expertiseText: {
     fontSize: FONTS.caption,
-    color: COLORS.text,
-  },
-  progressBar: {
-    flex: 2,
-    height: 12,
-    backgroundColor: '#e9ecef',
-    borderRadius: 6,
-    overflow: 'hidden',
-    marginHorizontal: SPACING.sm,
-  },
-  progressFill: {
-    height: '100%',
-    backgroundColor: COLORS.primary,
-    borderRadius: 6,
-  },
-  skillLevel: {
-    fontSize: FONTS.small,
     color: COLORS.textSecondary,
-    width: 36,
-    textAlign: 'right',
+    flex: 1,
+  },
+  techGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: SPACING.sm,
+  },
+  techBadge: {
+    backgroundColor: '#f0f7ff',
+    paddingHorizontal: SPACING.md,
+    paddingVertical: SPACING.sm,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(0, 123, 255, 0.2)',
+  },
+  techText: {
+    fontSize: FONTS.caption,
+    color: COLORS.primary,
+    fontWeight: '500',
   },
 });

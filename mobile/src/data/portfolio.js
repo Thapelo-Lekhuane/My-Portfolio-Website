@@ -1,7 +1,7 @@
 export const PROFILE = {
   name: 'Thapelo Lekhuane',
   title: 'Software Engineer, DevOps Engineer, Web Developer, Microsoft Cloud Developer',
-  about: "I'm a soft-spoken software engineer with a passion for creating innovative digital solutions. With expertise in JavaScript, React, Node.js, C#, ASP.NET Core, and Firebase, I specialize in building modern, scalable web applications that deliver exceptional user experiences. My approach combines technical excellence with thoughtful communication, ensuring that every project not only meets technical requirements but also exceeds client expectations. I believe in writing clean, maintainable code and staying current with industry best practices to deliver solutions that are both robust and future-proof.",
+  about: "I'm a software engineer who leads technical architecture and delivery across the full stack. I combine hands-on development with system design—building scalable applications, mentoring teams, and driving technical decisions that ship. I've architected platforms serving youth development, built AI-powered tools for job seekers, and delivered enterprise solutions on React, Node.js, C#, ASP.NET Core, and Azure. I focus on clean architecture, performance, and maintainable systems—not just code that works, but systems that scale.",
 };
 
 export const EXPERIENCE = [
@@ -168,6 +168,29 @@ export const CONTACT = {
     { name: 'Instagram', url: 'https://www.instagram.com/thapelo_in_tech/' },
   ],
 };
+
+export const PROFILE_EXPERTISE = [
+  'System Design & Architecture',
+  'Full-Stack Development',
+  'Cloud & DevOps',
+  'Technical Leadership',
+  'Mentorship',
+];
+
+export const TECH_STACK = [
+  'React',
+  'Angular',
+  'Node.js',
+  'TypeScript',
+  'C#',
+  'ASP.NET Core',
+  'Azure',
+  'MongoDB',
+  'Firebase',
+  'CI/CD',
+  'Terraform',
+  'Docker',
+];
 
 export const SKILLS = {
   technical: [

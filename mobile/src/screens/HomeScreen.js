@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { COLORS, SPACING, FONTS } from '../constants/theme';
 import { PROFILE } from '../data/portfolio';
+import GeometricBackground from '../components/GeometricBackground';
 
 const { width, height } = Dimensions.get('window');
 
@@ -21,6 +22,7 @@ export default function HomeScreen({ navigation }) {
         resizeMode="cover"
       >
         <View style={styles.overlay} />
+        <GeometricBackground />
         <View style={styles.content}>
           <Text style={styles.title}>I am {PROFILE.name}</Text>
           <Text style={styles.subtitle}>{PROFILE.title}</Text>

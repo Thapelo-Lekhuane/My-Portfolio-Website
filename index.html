@@ -1073,11 +1073,33 @@
               <!-- About Me Description -->
               <div class="about-description mb-4">
                 <h5 class="mb-3">Who I Am</h5>
-                <p class="mb-4">I'm a soft-spoken software engineer with a passion for creating innovative digital solutions. With expertise in JavaScript, React, Node.js, C#, ASP.NET Core, and Firebase, I specialize in building modern, scalable web applications that deliver exceptional user experiences. My approach combines technical excellence with thoughtful communication, ensuring that every project not only meets technical requirements but also exceeds client expectations. I believe in writing clean, maintainable code and staying current with industry best practices to deliver solutions that are both robust and future-proof.</p>
+                <p class="mb-4">I'm a software engineer who leads technical architecture and delivery across the full stack. I combine hands-on development with system design—building scalable applications, mentoring teams, and driving technical decisions that ship. I've architected platforms serving youth development, built AI-powered tools for job seekers, and delivered enterprise solutions on React, Node.js, C#, ASP.NET Core, and Azure. I focus on clean architecture, performance, and maintainable systems—not just code that works, but systems that scale.</p>
               </div>
 
-              <div id="skill-rotator-bars" class="fade-box">
-                <!-- Skills rotate here -->
+              <div class="about-skills-modern">
+                <h5 class="mb-3">Core Expertise</h5>
+                <ul class="expertise-list mb-4">
+                  <li>System Design &amp; Architecture</li>
+                  <li>Full-Stack Development</li>
+                  <li>Cloud &amp; DevOps</li>
+                  <li>Technical Leadership</li>
+                  <li>Mentorship</li>
+                </ul>
+                <h5 class="mb-3">Tech Stack</h5>
+                <div class="tech-badges">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Angular</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">TypeScript</span>
+                  <span class="tech-badge">C#</span>
+                  <span class="tech-badge">ASP.NET Core</span>
+                  <span class="tech-badge">Azure</span>
+                  <span class="tech-badge">MongoDB</span>
+                  <span class="tech-badge">Firebase</span>
+                  <span class="tech-badge">CI/CD</span>
+                  <span class="tech-badge">Terraform</span>
+                  <span class="tech-badge">Docker</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1273,14 +1295,49 @@
     opacity: 1 !important;
   }
 
-  #skill-rotator-bars h5 {
+  .about-skills-modern h5 {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    color: #333;
   }
 
-  #skill-rotator-bars span {
+  .expertise-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .expertise-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  .expertise-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: #f0f7ff;
+    color: #007bff;
     font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 123, 255, 0.2);
   }
 
   @media (max-width: 768px) {
@@ -1288,83 +1345,9 @@
       text-align: center;
       max-width: 100%;
     }
-
-    #skill-rotator-bars {
-      margin-top: 2rem;
-    }
   }
 </style>
 
-<!-- Script -->
-<script>
-  const techSkills = [
-    { name: "HTML", level: 85 },
-    { name: "CSS3", level: 75 },
-    { name: "JavaScript", level: 90 },
-    { name: "C#", level: 80 },
-    { name: "ASP.NET Core", level: 75 },
-    { name: "PHP", level: 50 }
-  ];
-
-  const softSkills = [
-    { name: "Communication", level: 80 },
-    { name: "Problem Solving", level: 85 },
-    { name: "Teamwork", level: 75 },
-    { name: "Adaptability", level: 70 }
-  ];
-
-  const hobbies = [
-    { name: "Gaming", level: 80 },
-    { name: "Music Production", level: 75 },
-    { name: "Reading", level: 70 },
-    { name: "Hiking", level: 65 }
-  ];
-
-  const container = document.getElementById("skill-rotator-bars");
-  const skillSets = [
-    { title: "Technical Skills", skills: techSkills },
-    { title: "Soft Skills", skills: softSkills },
-    { title: "Hobbies", skills: hobbies }
-  ];
-  let currentIndex = 0;
-
-  function renderBars({ title, skills }) {
-    container.classList.remove("fade-in");
-    setTimeout(() => {
-      container.innerHTML = `<h5>${title}</h5>`;
-      skills.forEach(skill => {
-        const label = document.createElement("span");
-        label.textContent = skill.name;
-        label.className = "d-flex justify-content-between mb-1";
-
-        const outer = document.createElement("div");
-        outer.className = "progress mb-2";
-
-        const inner = document.createElement("div");
-        inner.className = "progress-bar";
-        inner.role = "progressbar";
-        inner.style.width = `${skill.level}%`;
-        inner.setAttribute("aria-valuenow", skill.level);
-        inner.setAttribute("aria-valuemin", "0");
-        inner.setAttribute("aria-valuemax", "100");
-        inner.textContent = `${skill.level}%`;
-
-        outer.appendChild(inner);
-        container.appendChild(label);
-        container.appendChild(outer);
-      });
-      container.classList.add("fade-in");
-    }, 200);
-  }
-
-  function rotateSkills() {
-    renderBars(skillSets[currentIndex]);
-    currentIndex = (currentIndex + 1) % skillSets.length;
-  }
-
-  rotateSkills();
-  setInterval(rotateSkills, 5000);
-</script>
 
 
 
