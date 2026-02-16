@@ -69,7 +69,7 @@ export const PROJECTS = [
     subtitle: 'Software Engineer • 2024',
     description: 'Built a user-friendly task management app allowing users to add, update, complete, and delete to-dos.',
     image: require('../../assets/img/Todo-list.png'),
-    url: 'https://thapelo-lekhuane.github.io/to-do-list-capaciti/',
+    url: 'https://thapelo-lekhuane.github.io/To-Do-list/',
   },
   {
     id: '3',

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>THAPELO LEKHUANE'S 3D PORTFOLIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thapelo Lekhuane's Interactive 3D Portfolio - DevOps Engineer & Software Developer">
+    
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom 3D Styles -->
+    <link href="css/style-3d.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Loading 3D Portfolio...</h2>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Canvas -->
+    <canvas id="three-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav id="nav-3d">
+        <div class="nav-brand">
+            <h3>THAPELO LEKHUANE</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" data-section="0" class="nav-link active">Home</a></li>
+            <li><a href="#" data-section="1" class="nav-link">About</a></li>
+            <li><a href="#" data-section="2" class="nav-link">Experience</a></li>
+            <li><a href="#" data-section="3" class="nav-link">Services</a></li>
+            <li><a href="#" data-section="4" class="nav-link">Projects</a></li>
+            <li><a href="#" data-section="5" class="nav-link">Certifications</a></li>
+            <li><a href="#" data-section="6" class="nav-link">Hustles</a></li>
+            <li><a href="#" data-section="7" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Overlays -->
+    <div id="content-overlay">
+        <!-- Home Section -->
+        <div class="content-section active" data-section="0">
+            <div class="hero-content">
+                <h1 class="hero-title">I am <span class="highlight">Thapelo Lekhuane</span></h1>
+                <div class="hero-subtitle">
+                    <span id="typed-text">Software Engineer</span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Software Engineer, DevOps Engineer, Web Developer, Microsoft Cloud Developer.
+                    Welcome to my interactive 3D portfolio experience showcasing my journey in tech.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-3d primary" data-action="projects">View Projects</button>
+                    <button class="btn-3d secondary" data-action="contact">Get In Touch</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="content-section" data-section="1">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3 style="color: #00d4ff; margin-bottom: 20px;">Who I Am</h3>
+                        <p>
+                            I'm a software engineer who leads technical architecture and delivery across the full stack. I combine hands-on development with system design—building scalable applications, mentoring teams, and driving technical decisions that ship. I've architected platforms serving youth development, built AI-powered tools for job seekers, and delivered enterprise solutions on React, Node.js, C#, ASP.NET Core, and Azure. I focus on clean architecture, performance, and maintainable systems—not just code that works, but systems that scale.
+                        </p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript 90%</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML 85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3 75%</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-php"></i>
+                                <span>PHP 50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="34">0</div>
+                            <div class="stat-label">Works Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="2">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="13">0</div>
+                            <div class="stat-label">Total Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="content-section" data-section="2">
+            <div class="experience-content">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline-3d">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>SOFTWARE ENGINEER</h3>
+                            <p class="company">Talent Match Africa</p>
+                            <p class="period">May 2025 - Present</p>
+                            <p>Developing responsive front-end interfaces using React, Angular, and modern JavaScript/TypeScript. Building and customizing WordPress themes and HubSpot CMS templates for dynamic, marketing-driven websites.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>FULLSTACK DEVELOPER</h3>
+                            <p class="company">CAPACITI</p>
+                            <p class="period">December 2024 - May 2025</p>
+                            <p>Built and deployed front-end and full-stack apps with React, Angular, Node.js, and MongoDB. Wrote clean, scalable, and high-performance code while managing version control with Git.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>DEVOPS ENGINEER</h3>
+                            <p class="company">DynamicDNA</p>
+                            <p class="period">August 2024 - November 2024</p>
+                            <p>Built cloud-native applications on Azure. Used Infrastructure as Code with ARM, Bicep, and Terraform. Designed and managed CI/CD pipelines for smooth deployments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="content-section" data-section="3">
+            <div class="services-content">
+                <h2 class="section-title">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Software Development</h3>
+                        <p>Custom software solutions using modern programming languages and frameworks to build scalable and efficient applications.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>DevOps Solutions</h3>
+                        <p>Automating infrastructure, CI/CD pipelines, and cloud deployments to streamline software development and operations.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Computing</h3>
+                        <p>Deploying and managing cloud-based applications on AWS, Azure, and Google Cloud for scalability and efficiency.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>System Architecture</h3>
+                        <p>Designing robust, high-performance software architectures that ensure security, scalability, and maintainability.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Containerization</h3>
+                        <p>Managing containerized applications using Docker and Kubernetes for better scalability and resource utilization.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Security & Compliance</h3>
+                        <p>Implementing security best practices, monitoring threats, and ensuring compliance with industry standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="content-section" data-section="4">
+            <div class="projects-content">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="0">
+                        <div class="project-image">
+                            <img src="img/Legaelamatlo.png" alt="Legae La Matlo Website">
+                        </div>
+                        <div class="project-info">
+                            <h3>Legae La Matlo Skills Development Center</h3>
+                            <p>Professional website for a skills development center showcasing services, programs, and contact information</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="1">
+                        <div class="project-image">
+                            <img src="img/Todo-list.png" alt="Todo List App">
+                        </div>
+                        <div class="project-info">
+                            <h3>To-Do List Application</h3>
+                            <p>User-friendly task management app with intuitive UI/UX and efficient task tracking functionality</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="2">
+                        <div class="project-image">
+                            <img src="img/Movie-db.png" alt="Movie Database Website">
+                        </div>
+                        <div class="project-info">
+                            <h3>Movie Database Website</h3>
+                            <p>Dynamic web application for browsing movies with search filters, ratings, and detailed movie information</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="content-section" data-section="5">
+            <div class="certifications-content">
+                <h2 class="section-title">My Certifications</h2>
+                <div class="certifications-gallery">
+                    <div class="cert-card">
+                        <img src="img/DevOps Essentials.png" alt="DevOps Essentials">
+                        <div class="cert-info">
+                            <h4>DevOps Essentials</h4>
+                            <p>Professional Certification</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/Cloud Architecture and Infrastructure.png" alt="Cloud Architecture">
+                        <div class="cert-info">
+                            <h4>Cloud Architecture & Infrastructure</h4>
+                            <p>Professional Certification</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/Software Engineering Essentials.png" alt="Software Engineering">
+                        <div class="cert-info">
+                            <h4>Software Engineering Essentials</h4>
+                            <p>Professional Certification</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/AZ-900.png" alt="Azure Fundamentals">
+                        <div class="cert-info">
+                            <h4>AZ-900 Azure Fundamentals</h4>
+                            <p>Microsoft Azure</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/Git and GitHub Essentials.png" alt="Git and GitHub">
+                        <div class="cert-info">
+                            <h4>Git and GitHub Essentials</h4>
+                            <p>Professional Certification</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/66-alx-aice-ai-career-essentials-certificate-thapelo-lekhuane.png" alt="AI Career Essentials">
+                        <div class="cert-info">
+                            <h4>AI Career Essentials</h4>
+                            <p>ALX Programme</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hustles Section -->
+        <div class="content-section" data-section="6">
+            <div class="hustles-content">
+                <h2 class="section-title">My Hustles</h2>
+                <div class="hustles-timeline">
+                    <div class="hustle-item">
+                        <div class="hustle-image">
+                            <img src="img/ROAD1.jpg" alt="Road Maintenance">
+                        </div>
+                        <div class="hustle-info">
+                            <h3>Road Maintenance & Mining Road Signage</h3>
+                            <p>Motau Mining Solutions • 2023 - Installation and maintenance of mining road signage to enhance safety and compliance on-site.</p>
+                        </div>
+                    </div>
+                    <div class="hustle-item">
+                        <div class="hustle-image">
+                            <img src="img/PPE1.jpg" alt="PPE Supply">
+                        </div>
+                        <div class="hustle-info">
+                            <h3>PPE Supply & Embroidery</h3>
+                            <p>Motau Mining Solutions • 2023 - Provision of high-quality Personal Protective Equipment with custom embroidery services for branding.</p>
+                        </div>
+                    </div>
+                    <div class="hustle-item">
+                        <div class="hustle-image">
+                            <img src="img/SEC1.jpg" alt="Security Services">
+                        </div>
+                        <div class="hustle-info">
+                            <h3>Security Services</h3>
+                            <p>Dinkwe LKH Tactical Response • 2024 - Armed and unarmed guarding services, escort services, CCTV installations, and electric fencing.</p>
+                        </div>
+                    </div>
+                    <div class="hustle-item">
+                        <div class="hustle-image">
+                            <img src="img/HB1 (1).jpg" alt="Personal Interests">
+                        </div>
+                        <div class="hustle-info">
+                            <h3>Hobbies & Personality</h3>
+                            <p>Personal Interests • 2025 - Soft-spoken, family-oriented. Passionate about FIFA and movies. When I play, I play hard; when I work, I work even harder.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="content-section" data-section="7">
+            <div class="contact-content">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p class="contact-intro" style="margin-bottom: 30px; color: rgba(255, 255, 255, 0.8); font-size: 1.1rem;">
+                            Feel free to reach out! Whether you have a question, collaboration idea, or just want to connect, I'd love to hear from you.
+                        </p>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>thapelolekhuane2@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0636165831</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>1632, Gauteng hospital view Mayibuye Cres.</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/thapelo-lekhuane-4092112b1" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Thapelo-Lekhuane" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/thapelo_in_tech/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/mdkzyyqz" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-3d primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Controls -->
+    <div id="audio-controls">
+        <button id="audio-toggle" title="Toggle Background Music">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/three-scene.js"></script>
+    <script src="js/portfolio-3d.js"></script>
+</body>
+</html>

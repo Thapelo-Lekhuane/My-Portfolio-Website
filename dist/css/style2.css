@@ -1,0 +1,45 @@
+.certifications-section {
+    padding: 40px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.certifications-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 4 columns on wide screens */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certifications-container img {
+     aspect-ratio: 16 / 11;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.certifications-container img:hover {
+    transform: scale(1.05);
+}
+
+
+.certifications-container img {
+    aspect-ratio: 16 / 11;
+    width: 100%;
+    max-width: 300px; /* was 250px */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
