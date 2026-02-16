@@ -5,7 +5,7 @@ node_modules/
 
 # Expo
 .expo/
-dist/
+# dist/ - keep web build for deployment (mobile/dist)
 web-build/
 expo-env.d.ts
 
